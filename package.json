@@ -1,0 +1,65 @@
+{
+  "name": "cinder-launcher",
+  "productName": "Cinder",
+  "version": "2.0.0",
+  "description": "Cinder - open Minecraft launcher (offline + Microsoft login, mods, servers, Discord presence)",
+  "author": "radoslavgeme",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "test": "node tests/smoke.js",
+    "dist": "electron-builder",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "adm-zip": "^0.6.1",
+    "discord-rpc": "^4.0.1",
+    "minecraft-launcher-core": "^3.16.1",
+    "msmc": "^5.0.5",
+    "skinview3d": "^3.4.2",
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8",
+    "typescript": "^7.0.2"
+  },
+  "build": {
+    "appId": "gg.cinder.launcher",
+    "productName": "Cinder",
+    "files": [
+      "*.js",
+      "index.html",
+      "styles.css",
+      "assets/**/*",
+      "vendor/**/*",
+      "bin/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.games"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "assets/icon.png",
+      "category": "Game"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Cinder"
+    }
+  }
+}

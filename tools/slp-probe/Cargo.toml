@@ -1,0 +1,11 @@
+﻿[package]
+name = "slp-probe"
+version = "0.1.0"
+edition = "2021"
+description = "Minimal Minecraft Java Server List Ping probe for launcher"
+license = "MIT"
+
+[[bin]]
+name = "slp-probe"
+path = "src/main.rs"
+
