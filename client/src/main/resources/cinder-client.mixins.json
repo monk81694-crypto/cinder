@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "gg.cinder.client.zoom",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ZoomMixin",
+    "MouseScrollMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

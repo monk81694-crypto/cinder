@@ -1,0 +1,52 @@
+// Cinder Client — Fabric mod build (Loom). Original build file (MIT).
+// Client-only mod: no splitEnvironmentSourceSets(); the client-only nature is
+// declared via "environment": "client" in src/main/resources/fabric.mod.json.
+plugins {
+    id 'java'
+    id 'fabric-loom' version '1.17.21' // literal required here (plugins DSL forbids property refs); keep in sync with loom_version in gradle.properties
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+java {
+    // Temurin 25 (present) compiles with --release 21 below, so the jar runs
+    // on any Java 21+ runtime without needing a provisioned JDK 21 here.
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    // Loom provides the Fabric + Minecraft repositories automatically.
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    // Yarn mappings for 1.21.11 (26.x has none published — see gradle.properties).
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // JUnit 5 for unit tests (project contract).
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+loom {
+    // Standard single-source-set layout; client-only enforced by fabric.mod.json.
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}

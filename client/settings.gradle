@@ -1,0 +1,21 @@
+// Cinder Client — Gradle settings.
+// Loom is resolved from the Fabric maven (see pluginManagement below);
+// the exact Loom version is pinned via loom_version in gradle.properties
+// and applied in build.gradle. Original build file for the Cinder project (MIT).
+pluginManagement {
+    repositories {
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'cinder-client'

@@ -71,9 +71,13 @@
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h-3v2.2a1.6 1.6 0 1 1 0 3.2V12h3.2a1.6 1.6 0 1 1 3.2 0H20V9h-2.2a1.6 1.6 0 1 1 0-3.2V4h-2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 12h3.2a1.6 1.6 0 1 1 0 3.2V18h3.2a1.6 1.6 0 1 0-3.2H14v2.2a1.6 1.6 0 1 1-3.2 0V17H8v3H4v-8Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
         <span>Mods</span>
       </button>
-<button class="nav" data-tab="skins" type="button" title="Skins (Ctrl+7)">
+      <button class="nav" data-tab="skins" type="button" title="Skins (Ctrl+7)">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.3" fill="currentColor"/><circle cx="15" cy="10" r="1.3" fill="currentColor"/><path d="M8.5 14.5c1 1.6 2.2 2.3 3.5 2.3s2.5-.7 3.5-2.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         <span>Skins</span>
+      </button>
+      <button class="nav" data-tab="client" type="button" title="Client (Ctrl+9)">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5L13 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span>Client</span>
       </button>
       <button class="nav" data-tab="worlds" type="button" title="Worlds (Ctrl+8)">
         <svg class="nav-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 8.2c0-1 .8-1.7 1.7-1.7h4l1.6 1.9h7.5c1 0 1.7.8 1.7 1.7v7.2c0 1-.8 1.7-1.7 1.7H5.2c-1 0-1.7-.8-1.7-1.7V8.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
@@ -546,6 +550,49 @@
             <input id="set-discord-dl" type="text" class="input mono" placeholder="https://github.com/radoslavgeme/cinder" maxlength="200" autocomplete="off" spellcheck="false">
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="tab-client" class="tab">
+      <header class="tab-header">
+        <p class="eyebrow">In-game</p>
+        <h1>Client</h1>
+        <p class="tab-sub">Cinder Client 1.0.0 for Minecraft 1.21.11 (Fabric) — HUD modules, editor, zoom, fair-play only.</p>
+      </header>
+
+      <div class="card">
+        <h2>Install <span id="client-state-badge" class="badge">not installed</span></h2>
+        <p class="card-hint">Installs the locally built client jar plus Fabric API into this game directory, and writes the shared launcher ↔ client config.</p>
+        <div class="toolbar">
+          <button id="client-install" class="btn-primary" type="button">Install client</button>
+          <button id="client-update" class="btn-secondary" type="button">Update</button>
+        </div>
+        <p id="client-status" class="status-text">Not checked yet.</p>
+      </div>
+
+      <div class="card">
+        <h2>HUD profiles</h2>
+        <p class="card-hint">Profiles are created in-game (Right Shift → HUD Editor). Pick one here to make it active next launch.</p>
+        <div class="toolbar">
+          <select id="hud-profile-list" class="select"></select>
+          <button id="hud-profile-set" class="btn-primary" type="button">Use profile</button>
+          <button id="hud-profile-refresh" class="btn-secondary" type="button">Refresh</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Features</h2>
+        <ul class="news-list">
+          <li><b>12 HUD modules.</b> FPS, ping, coords + direction, clock, memory, server, CPS, keystrokes, armor, held items, potions, sprint status.</li>
+          <li><b>HUD editor.</b> Drag to move, Shift-drag to resize, 8px grid snap, named profiles.</li>
+          <li><b>Zoom.</b> Hold C for smooth zoom, [ and ] adjust 1x–10x. No mixins, no cheats.</li>
+          <li><b>Extras.</b> Custom crosshair, F9 screenshot-to-clipboard, one-click performance pack (Sodium/Lithium/FerriteCore + optional Iris) with undo.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Changelog</h2>
+        <div id="client-changelog" class="muted">1.0.0 — initial release: 12 HUD modules, drag-and-drop editor with profiles, smooth zoom, crosshair editor, screenshot helper, performance installer with undo. Fair-play only, no cheats.</div>
       </div>
     </section>
 

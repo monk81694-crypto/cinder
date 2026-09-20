@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "cinder-client",
+  "version": "${version}",
+  "name": "Cinder Client",
+  "description": "Original fair-play client: HUD modules, drag-and-drop editor, zoom, performance installer.",
+  "authors": ["radoslavgeme"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["gg.cinder.client.CinderClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "fabric-api": "*",
+    "minecraft": "1.21.11",
+    "java": ">=21"
+  }
+}
