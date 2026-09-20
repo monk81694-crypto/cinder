@@ -176,7 +176,7 @@ test('package.json has name, test script, discord dep, assets on disk', () => {
   assert.strictEqual(pkg.author, 'radoslavgeme');
   assert.ok(pkg.scripts && pkg.scripts.test, 'npm test script missing');
   assert.ok(pkg.dependencies['discord-rpc'], 'discord-rpc dep missing');
-  for (const a of ['assets/logo.svg', 'assets/mark.svg', 'assets/icon.ico', 'assets/icon.png', 'assets/logo-512.png']) {
+  for (const a of ['brand/logo.svg', 'brand/wordmark.svg', 'brand/logo-light.svg', 'brand/logo-dark.svg', 'brand/logo-mono.svg', 'brand/logo-mono-white.svg', 'assets/icon.ico', 'assets/icon.png', 'assets/logo-512.png', 'assets/icons/icon-16.png', 'assets/tray.png']) {
     assert.ok(fs.existsSync(path.join(DIR, a)), `${a} missing`);
   }
 });

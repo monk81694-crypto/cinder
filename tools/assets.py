@@ -62,17 +62,17 @@ MANIFEST = [
         "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Minecraft_-_Deep_Dark.png/1280px-Minecraft_-_Deep_Dark.png",
     },
     {
-        "rel": "logo.svg",
+        "rel": "../brand/logo.svg",
         "magic": None,
         "magic_name": "SVG text (<svg)",
-        "min_size": 1 * KB,
+        "min_size": 200,
         "kind": "svg",
     },
     {
-        "rel": "mark.svg",
+        "rel": "../brand/wordmark.svg",
         "magic": None,
         "magic_name": "SVG text (<svg)",
-        "min_size": 1 * KB,
+        "min_size": 200,
         "kind": "svg",
     },
     {

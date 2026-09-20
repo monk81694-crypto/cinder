@@ -205,7 +205,7 @@ function createWindow() {
   try {
     // Real .ico on Windows (taskbar + shortcuts), SVG elsewhere.
     const ico = path.join(__dirname, 'assets', 'icon.ico');
-    const svg = path.join(__dirname, 'assets', 'logo.svg');
+    const svg = path.join(__dirname, 'brand', 'logo.svg');
     if (process.platform === 'win32' && fs.existsSync(ico)) icon = ico;
     else if (fs.existsSync(svg)) icon = svg;
   } catch {}

@@ -1,6 +1,6 @@
 ﻿# Cinder v2.0.0 — Minecraft Launcher (offline + Microsoft, mods, Discord presence)
 
-![Cinder logo](assets/logo.svg)
+![Cinder logo](brand/logo-light.svg)
 
 Made by **radoslavgeme**.
 
