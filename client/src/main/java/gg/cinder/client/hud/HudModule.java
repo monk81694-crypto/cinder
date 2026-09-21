@@ -1,6 +1,6 @@
 // Cinder client mod -- original code.
 // Base class for every Cinder HUD module (FPS, ping, coords, clock, ...).
-// Target: Minecraft 1.21.11 / Yarn mappings / Fabric API / Java 21.
+// Target: MinecraftClient 26.2 / Mojang mappings / Fabric API / Java 21.
 package gg.cinder.client.hud;
 
 import net.minecraft.client.MinecraftClient;
@@ -33,11 +33,11 @@ public abstract class HudModule {
     protected int w;
     protected int h;
 
-    /** Live client instance for subclasses (textRenderer, player state, ...). */
+    /** Live client instance for subclasses (font, player state, ...). */
     protected final MinecraftClient mc = MinecraftClient.getInstance();
 
     /**
-     * Reusable scratch buffer for building display text without allocating.
+     * Reusable scratch buffer for building display Text without allocating.
      * Use via {@link #scratch()}: it clears the buffer and hands it back.
      */
     protected final StringBuilder scratch = new StringBuilder(64);
@@ -64,17 +64,17 @@ public abstract class HudModule {
     /**
      * Draws the module. Called every HUD frame while enabled.
      *
-     * @param ctx       draw context (all rendering goes through this)
+     * @param context  draw context (all rendering goes through this)
      * @param tickDelta render tick delta for animations
      */
-    public abstract void render(DrawContext ctx, float tickDelta);
+    public abstract void render(DrawContext context, float tickDelta);
 
     /**
      * Bridge for callers that pass the client explicitly; delegates to
      * {@link #render(DrawContext, float)}.
      */
-    public final void render(DrawContext ctx, float tickDelta, MinecraftClient ignored) {
-        render(ctx, tickDelta);
+    public final void render(DrawContext context, float tickDelta, MinecraftClient ignored) {
+        render(context, tickDelta);
     }
 
     /** Stable config id. */

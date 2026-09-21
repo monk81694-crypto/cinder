@@ -7,17 +7,17 @@ import net.minecraft.client.gui.DrawContext;
  * FPS overlay: draws {@code "FPS: 240"}.
  *
  * <p>ORIGINAL fair-play code: read-only view of
- * {@code MinecraftClient.getCurrentFps()}; display only, never modifies
+ * {@code MinecraftClient.getFps()}; display only, never modifies
  * game state, sends no packets, and performs no automation.</p>
  *
- * <p>No per-frame allocations except the unavoidable text {@code String}:
+ * <p>No per-frame allocations except the unavoidable Text {@code String}:
  * one reused pre-sized {@link StringBuilder}, no {@code String.format},
  * no streams/lambdas, no boxing.</p>
  */
 public final class FpsModule extends HudModule {
     private static final int TEXT_COLOR = 0xFFFFFFFF;
 
-    private final StringBuilder text = new StringBuilder(16);
+    private final StringBuilder Text = new StringBuilder(16);
 
     public FpsModule() {
         super("FPS", 4, 4, 70, 12);
@@ -35,9 +35,9 @@ public final class FpsModule extends HudModule {
             return;
         }
         int fps = mc.getCurrentFps();
-        text.setLength(0);
-        text.append("FPS: ");
-        text.append(fps);
-        context.drawText(mc.textRenderer, text.toString(), x, y, TEXT_COLOR, true);
+        Text.setLength(0);
+        Text.append("FPS: ");
+        Text.append(fps);
+        context.drawText(mc.textRenderer, Text.toString(), x, y, TEXT_COLOR, true);
     }
 }

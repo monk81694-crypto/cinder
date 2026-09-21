@@ -16,7 +16,7 @@ public class PerfScreen extends Screen {
     private static final int BACKGROUND = 0xEE101024;
 
     private final Screen parent;
-    private String status = "Sodium, Lithium, FerriteCore — fetched from Modrinth, never bundled.";
+    private String status = "Sodium, Lithium, FerriteCore -- fetched from Modrinth, never bundled.";
 
     public PerfScreen(Screen parent) {
         super(Text.literal("Performance"));
@@ -25,33 +25,33 @@ public class PerfScreen extends Screen {
 
     @Override
     protected void init() {
-        ButtonWidget installButton = ButtonWidget.builder(Text.literal("Install performance pack"), pressed -> {
-                    status = "Downloading from Modrinth…";
+        ButtonWidget installButtonWidget = ButtonWidget.builder(Text.literal("Install performance pack"), pressed -> {
+                    status = "Downloading from Modrinth...";
                     PerformanceInstaller.install(false);
-                    status = "Working in the background — check the log.";
+                    status = "Working in the background -- check the log.";
                 })
                 .dimensions(this.width / 2 - 155, 64, 150, 20)
                 .build();
-        ButtonWidget irisButton = ButtonWidget.builder(Text.literal("Install + Iris"), pressed -> {
-                    status = "Downloading from Modrinth…";
+        ButtonWidget irisButtonWidget = ButtonWidget.builder(Text.literal("Install + Iris"), pressed -> {
+                    status = "Downloading from Modrinth...";
                     PerformanceInstaller.install(true);
-                    status = "Working in the background — check the log.";
+                    status = "Working in the background -- check the log.";
                 })
                 .dimensions(this.width / 2 + 5, 64, 150, 20)
                 .build();
-        ButtonWidget undoButton = ButtonWidget.builder(Text.literal("Undo installs"), pressed -> {
+        ButtonWidget undoButtonWidget = ButtonWidget.builder(Text.literal("Undo installs"), pressed -> {
                     List<String> removed = PerformanceInstaller.undo();
                     status = removed.isEmpty() ? "Nothing to remove." : "Removed: " + String.join(", ", removed);
                 })
                 .dimensions(this.width / 2 - 155, 90, 150, 20)
                 .build();
-        ButtonWidget doneButton = ButtonWidget.builder(Text.literal("Done"), pressed -> this.close())
+        ButtonWidget doneButtonWidget = ButtonWidget.builder(Text.literal("Done"), pressed -> this.close())
                 .dimensions(this.width / 2 + 5, 90, 150, 20)
                 .build();
-        this.addDrawableChild(installButton);
-        this.addDrawableChild(irisButton);
-        this.addDrawableChild(undoButton);
-        this.addDrawableChild(doneButton);
+        this.addDrawableChild(installButtonWidget);
+        this.addDrawableChild(irisButtonWidget);
+        this.addDrawableChild(undoButtonWidget);
+        this.addDrawableChild(doneButtonWidget);
     }
 
     @Override

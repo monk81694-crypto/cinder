@@ -1,6 +1,6 @@
 // Cinder client mod -- original code.
 // Package: gg.cinder.client.util
-// Target: Minecraft 26.2 / Yarn mappings / Fabric API / Java 25.
+// Target: MinecraftClient 26.2 / Yarn mappings / Fabric API / Java 25.
 package gg.cinder.client.util;
 
 import net.minecraft.client.MinecraftClient;
@@ -17,6 +17,7 @@ import net.minecraft.client.gui.DrawContext;
  *       None of these methods create objects.</li>
  *   <li>Colors are packed ARGB ints, e.g. {@code 0x80000000} for half-black.</li>
  * </ul>
+ * </p>
  */
 public final class Draw {
 
@@ -26,7 +27,7 @@ public final class Draw {
     /** Default 1px panel border (ARGB). */
     public static final int PANEL_BORDER = 0xFF6A6AF5;
 
-    /** Default HUD text color (ARGB white). */
+    /** Default HUD Text color (ARGB white). */
     public static final int TEXT_WHITE = 0xFFFFFFFF;
 
     /** Editor selection outline (ARGB). */
@@ -71,20 +72,20 @@ public final class Draw {
     }
 
     /**
-     * Draws a string with Minecraft's drop shadow using the client's text renderer.
+     * Draws a string with MinecraftClient's drop shadow using the client's Text renderer.
      *
-     * @param text  caller-owned string (e.g. a module label field or scratch-built
-     *              text); never allocated in here
-     * @param color ARGB text color
+     * @param Text  caller-owned string (e.g. a module label field or scratch-built
+     *              Text); never allocated in here
+     * @param color ARGB Text color
      * @return advance width in scaled pixels (0 for null/empty), so callers can
-     *         size module boxes from measured text without extra work
+     *         size module boxes from measured Text without extra work
      */
-    public static int drawTextWithShadow(DrawContext ctx, MinecraftClient mc, String text, int x, int y, int color) {
-        if (text == null || text.isEmpty()) {
+    public static int drawTextWithShadow(DrawContext ctx, MinecraftClient mc, String Text, int x, int y, int color) {
+        if (Text == null || Text.isEmpty()) {
             return 0;
         }
-        ctx.drawText(mc.textRenderer, text, x, y, color, true);
-        return mc.textRenderer.getWidth(text);
+        ctx.drawText(mc.textRenderer, Text, x, y, color, true);
+        return mc.textRenderer.getWidth(Text);
     }
 
     /**
@@ -92,23 +93,23 @@ public final class Draw {
      *
      * @return advance width, same contract as {@link #drawTextWithShadow}
      */
-    public static int drawCenteredWithShadow(DrawContext ctx, MinecraftClient mc, String text, int centerX, int y, int color) {
-        if (text == null || text.isEmpty()) {
+    public static int drawCenteredWithShadow(DrawContext ctx, MinecraftClient mc, String Text, int centerX, int y, int color) {
+        if (Text == null || Text.isEmpty()) {
             return 0;
         }
-        int width = mc.textRenderer.getWidth(text);
-        ctx.drawText(mc.textRenderer, text, centerX - width / 2, y, color, true);
+        int width = mc.textRenderer.getWidth(Text);
+        ctx.drawText(mc.textRenderer, Text, centerX - width / 2, y, color, true);
         return width;
     }
 
     /**
      * Measures a string's width in scaled pixels. Zero allocation.
      */
-    public static int measure(MinecraftClient mc, String text) {
-        if (text == null || text.isEmpty()) {
+    public static int measure(MinecraftClient mc, String Text) {
+        if (Text == null || Text.isEmpty()) {
             return 0;
         }
-        return mc.textRenderer.getWidth(text);
+        return mc.textRenderer.getWidth(Text);
     }
 
     /**

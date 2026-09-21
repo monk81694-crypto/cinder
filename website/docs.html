@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinder Docs — Install, Mods, Skins, Worlds, Troubleshooting</title>
+<meta name="description" content="Cinder v2.0.0 documentation: install and first launch, versions, mods, worlds and backups, skins, Cinder Client, and troubleshooting (Invalid session, Java, Discord status).">
+<meta property="og:title" content="Cinder Docs">
+<meta property="og:description" content="Install, first launch, versions, mods, worlds, skins, Cinder Client and troubleshooting for Cinder v2.0.0.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06060f">
+<link rel="icon" href="../brand/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+.pg-page{background:var(--bg0,#06060f);color:var(--text,#e8e8f5);font-family:var(--font,Consolas,Menlo,monospace);min-height:100vh}
+.pg-skip{position:absolute;left:-9999px}
+.pg-skip:focus{position:static;display:inline-block;padding:8px}
+.pg-nav{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;max-width:880px;margin:0 auto;padding:16px 20px}
+.pg-nav a{color:var(--dim,#8f8fb0);text-decoration:none}
+.pg-nav a[aria-current="page"]{color:var(--text,#e8e8f5);text-decoration:underline}
+.pg-brand{font-weight:800;color:var(--text,#e8e8f5)}
+.pg-wrap{max-width:880px;margin:0 auto;padding:12px 20px 64px;line-height:1.65}
+.pg-wrap a{color:var(--cyan,#5cc8ff)}
+.pg-toc{border:1px solid var(--stroke-soft,rgba(140,140,255,.09));border-radius:8px;padding:14px 16px}
+.pg-sec{margin-top:32px}
+.pg-note{color:var(--dim,#8f8fb0);font-size:13px}
+.pg-footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--stroke-soft,rgba(140,140,255,.09));color:var(--dim,#8f8fb0);font-size:12px;line-height:1.6}
+.pg-footer a{color:var(--cyan,#5cc8ff)}
+</style>
+</head>
+<body>
+<div class="pg-page">
+<a class="pg-skip" href="#main">Skip to content</a>
+<header><nav class="pg-nav" aria-label="Primary">
+<a class="pg-brand" href="index.html">Cinder</a>
+<a href="download.html">Download</a>
+<a href="docs.html" aria-current="page">Docs</a>
+<a href="changelog.html">Changelog</a>
+<a href="faq.html">FAQ</a>
+</nav></header>
+<main id="main" class="pg-wrap">
+<h1>Cinder Docs (v2.0.0)</h1>
+<p>Everything below is taken from the Cinder README and repo docs. Tabs in the launcher: Play / Servers / Versions / Profiles / Skins / Worlds / Mods / Settings / Logs.</p>
+<nav class="pg-toc" aria-label="On this page">
+<strong>On this page:</strong>
+<ul>
+<li><a href="#pg-install">Install</a></li>
+<li><a href="#pg-first">First launch</a></li>
+<li><a href="#pg-versions">Versions</a></li>
+<li><a href="#pg-mods">Mods</a></li>
+<li><a href="#pg-worlds">Worlds and backups</a></li>
+<li><a href="#pg-skins">Skins</a></li>
+<li><a href="#pg-client">Cinder Client</a></li>
+<li><a href="#pg-trouble">Troubleshooting</a></li>
+</ul>
+</nav>
+<section class="pg-sec" aria-labelledby="pg-install">
+<h2 id="pg-install">Install</h2>
+<p><strong>Option A — installer (most players):</strong> grab the build for your system on the <a href="download.html">Download page</a> — Windows installer (.exe), macOS disk image (.dmg), or Linux AppImage — and run it.</p>
+<p><strong>Option B — run from source:</strong></p>
+<pre><code>cd tlauncher
+npm install
+npm start</code></pre>
+<p>Extras: <code>npm run dev</code> opens devtools, <code>npm run typecheck</code> runs <code>tsc --noEmit</code>, <code>npm test</code> runs the checks, and <code>npm run dist</code> builds distributable installers (Windows NSIS / macOS dmg / Linux AppImage).</p>
+</section>
+<section class="pg-sec" aria-labelledby="pg-first">
+<h2 id="pg-first">First launch</h2>
+<ul>
+<li>First launch downloads the game version (about 200 MB).</li>
+<li>Java is auto-detected and auto-picked per version: 26.x goes to Java 25, 1.20.5 / 1.21 and newer go to Java 21, 1.18 and newer go to Java 17.</li>
+<li>Add an account (offline name or Microsoft login), pick a version, optionally type a server IP for quick-join, then LAUNCH. The launcher remembers your last account, version and server.</li>
+</ul>
+</section>
+<section class="pg-sec" aria-labelledby="pg-versions">
+<h2 id="pg-versions">Versions</h2>
+<p>The Versions tab shows the live Mojang version list (cached 6 hours, with an offline fallback), with search, release / snapshot / beta / alpha filters, installed badges plus an installed-only filter, and uninstall for versions you no longer need.</p>
+</section>
+<section class="pg-sec" aria-labelledby="pg-mods">
+<h2 id="pg-mods">Mods</h2>
+<ul>
+<li>Browse and install from Modrinth search with a version picker.</li>
+<li>Your local list has an enable / disable toggle per mod.</li>
+<li>Fabric and Quilt loaders auto-install; Forge and NeoForge show mismatch warnings, so they need manual setup.</li>
+</ul>
+</section>
+<section class="pg-sec" aria-labelledby="pg-worlds">
+<h2 id="pg-worlds">Worlds and backups</h2>
+<ul>
+<li>The Worlds tab lists singleplayer saves found in <code>&lt;gameDir&gt;/saves</code> (folders containing <code>level.dat</code>), with size and modified date, Refresh, and Open saves folder.</li>
+<li><strong>Backup</strong> zips a world to <code>&lt;gameDir&gt;/backups/&lt;name&gt;-YYYYMMDD-HHMM.zip</code>.</li>
+<li><strong>Restore</strong> extracts the newest backup for that world; the current folder is kept as <code>.bak-&lt;timestamp&gt;</code>.</li>
+<li><strong>Delete</strong> removes the save folder after a confirm modal.</li>
+</ul>
+</section>
+<section class="pg-sec" aria-labelledby="pg-skins">
+<h2 id="pg-skins">Skins</h2>
+<ul>
+<li>The Skins tab shows a live 3D preview (skinview3d, auto-spin and walking pose, zoom locked).</li>
+<li><strong>Try a name:</strong> type any Java username to fetch its live skin (24 h disk cache).</li>
+<li><strong>My profile skin</strong> loads the active account skin in one click; <strong>Upload PNG</strong> imports a classic 64x64 PNG from disk; <strong>Save PNG</strong> downloads the current preview frame.</li>
+</ul>
+</section>
+<section class="pg-sec" aria-labelledby="pg-client">
+<h2 id="pg-client">Cinder Client</h2>
+<p>Cinder Client 1.0.0 is the optional client-side Fabric mod for Minecraft 1.21.11 (mod id <code>cinder-client</code>, client only): HUD modules, editor, zoom — fair-play only, no cheats or anti-cheat bypasses.</p>
+<p>Install it from the launcher Client tab (installed per game directory), or manually drop <code>cinder-client-1.0.0.jar</code> plus the matching Fabric API jar into the instance <code>mods/</code> folder and launch with Fabric Loader 0.19.3 or newer on Java 21 or newer.</p>
+</section>
+<section class="pg-sec" aria-labelledby="pg-trouble">
+<h2 id="pg-trouble">Troubleshooting</h2>
+<h3>Offline vs online-mode servers (“Invalid session”)</h3>
+<p>Offline names work on offline-mode servers, LAN worlds, and self-hosted servers with <code>online-mode=false</code>. They can never join online-mode premium servers such as Hypixel: those servers ask Mojang whether the session is valid and reject anything unsigned with “Failed to log in: Invalid session”. Sign in with a Microsoft account that owns Minecraft Java for those servers; the token auto-refreshes on launch.</p>
+<h3>Java issues</h3>
+<p>Cinder detects Java generically (JAVA_HOME, PATH, Adoptium, Microsoft, Temurin, BellSoft, Zulu builds, and Mojang-bundled runtimes — no hardcoded paths) and auto-picks per version (26.x to Java 25, 1.20.5 / 1.21+ to Java 21, 1.18+ to Java 17). If the wrong runtime is used, switch it in the Settings Java dropdown.</p>
+<h3>Discord status</h3>
+<p>Keep the Discord desktop app open <em>before</em> launching: your profile shows “Playing Cinder” with the logo, switching to “Playing Minecraft {version}” in game. If Settings → Discord → Test does not say Connected, or your profile shows the generic Minecraft grass block, open Discord → Settings → Registered Games, remove the Minecraft entry, restart Discord and Test again. The launcher also retries the connection every 30 s on its own.</p>
+<h3>Updates and diagnostics</h3>
+<p>Settings → Performance and updates: JVM presets <code>balanced</code> (default), <code>performance</code>, <code>latency</code> (ZGC, Java 21+ only); snowfall toggle; Check for updates with a Check now button; Copy diagnostics (version, Java list, settings, Mojang / Modrinth / Minotar reachability plus log tail) for support.</p>
+</section>
+</main>
+<footer class="pg-footer">
+<p>Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+<p>Cinder v2.0.0 by radoslavgeme · <a href="https://github.com/radoslavgeme/cinder">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

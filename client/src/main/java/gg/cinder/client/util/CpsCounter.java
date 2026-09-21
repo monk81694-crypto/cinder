@@ -3,7 +3,7 @@ package gg.cinder.client.util;
 import java.util.ArrayDeque;
 
 /**
- * PURE Java click-per-second counter. No Minecraft imports; unit-testable.
+ * PURE Java click-per-second counter. No MinecraftClient imports; unit-testable.
  *
  * <p>ORIGINAL code. Records click timestamps with {@link System#nanoTime()} and
  * counts how many fall inside the trailing 1000&nbsp;ms window. Old stamps are

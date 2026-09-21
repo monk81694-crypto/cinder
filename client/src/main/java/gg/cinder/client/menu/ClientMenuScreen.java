@@ -20,7 +20,7 @@ import java.util.List;
  * <p>Original code, no external GUI libraries: the background, title and
  * hover highlights are drawn manually with {@link DrawContext#fill} using
  * the Cinder brand palette (charcoal {@code #101024} background, ember
- * {@code #FF6B1A} hover borders, {@code #E8E8F5} text).</p>
+ * {@code #FF6B1A} hover borders, {@code #E8E8F5} Text).</p>
  *
  * <p>The screen lists one toggle button per HUD module id queried from
  * {@code HudManager.getModules()}, plus {@code "HUD Editor"},
@@ -45,10 +45,10 @@ public class ClientMenuScreen extends Screen {
     /** Charcoal background with EE alpha. */
     private static final int BACKGROUND = 0xEE101024;
 
-    /** Near-white text. */
+    /** Near-white Text. */
     private static final int TEXT_COLOR = 0xFFE8E8F5;
 
-    /** Dimmed subtitle text. */
+    /** Dimmed subtitle Text. */
     private static final int DIM_TEXT = 0xFF9A9AB5;
 
     /** Ember accent for hover borders and the title rule. */
@@ -103,21 +103,21 @@ public class ClientMenuScreen extends Screen {
         }
 
         int navY = this.height - 32;
-        ButtonWidget editorButton = ButtonWidget.builder(Text.literal("HUD Editor"), pressed -> openHudEditor())
+        ButtonWidget editorButtonWidget = ButtonWidget.builder(Text.literal("HUD Editor"), pressed -> openHudEditor())
                 .dimensions(this.width / 2 - 163, navY, 110, 20)
                 .build();
-        ButtonWidget perfButton = ButtonWidget.builder(Text.literal("Performance"), pressed -> openPerfScreen())
+        ButtonWidget perfButtonWidget = ButtonWidget.builder(Text.literal("Performance"), pressed -> openPerfScreen())
                 .dimensions(this.width / 2 - 45, navY, 110, 20)
                 .build();
-        ButtonWidget doneButton = ButtonWidget.builder(Text.literal("Done"), pressed -> this.close())
+        ButtonWidget doneButtonWidget = ButtonWidget.builder(Text.literal("Done"), pressed -> this.close())
                 .dimensions(this.width / 2 + 73, navY, 90, 20)
                 .build();
-        this.addDrawableChild(editorButton);
-        this.addDrawableChild(perfButton);
-        this.addDrawableChild(doneButton);
-        navButtons.add(editorButton);
-        navButtons.add(perfButton);
-        navButtons.add(doneButton);
+        this.addDrawableChild(editorButtonWidget);
+        this.addDrawableChild(perfButtonWidget);
+        this.addDrawableChild(doneButtonWidget);
+        navButtons.add(editorButtonWidget);
+        navButtons.add(perfButtonWidget);
+        navButtons.add(doneButtonWidget);
     }
 
     private static Collection<HudModule> queryModules() {

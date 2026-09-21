@@ -1,6 +1,6 @@
 // Cinder client mod -- original code.
 // Package: gg.cinder.client.hud
-// Target: Minecraft 26.2 / Yarn mappings / Fabric API / Java 25.
+// Target: MinecraftClient 26.2 / Mojang mappings / Fabric API / Java 21.
 package gg.cinder.client.hud;
 
 import com.google.gson.Gson;
@@ -34,12 +34,12 @@ import java.util.List;
  * persistence, and named layout profiles.
  *
  * <h2>HUD event choice</h2>
- * Rendering is hooked via Fabric API's {@link HudLayerRegistrationCallback} with an
+ * Rendering is hooked via Fabric API's {@link HudElementRegistry} with an
  * ordered vanilla layer instead of the legacy {@code HudRenderCallback}. Rationale:
  * <ul>
  *   <li>{@code HudRenderCallback} is the deprecated, single-phase hook: every listener
  *       draws in one unordered pass with no control over layering.</li>
- *   <li>{@code HudLayerRegistrationCallback} registers one ordered layer in the
+ *   <li>{@code HudElementRegistry} registers one ordered layer in the
  *       vanilla {@code LayeredDrawer}, so the Cinder overlay sorts deterministically
  *       against vanilla layers (hotbar, chat, misc overlays) and respects vanilla
  *       HUD visibility instead of fighting it.</li>
@@ -49,7 +49,7 @@ import java.util.List;
  * NOTE (unverified for 26.2): the vanilla-layer holder class has been renamed across
  * Fabric API versions ({@code IdentifiedLayer} in older builds,
  * {@code VanillaHudLayers} in newer ones). This file is written against
- * {@code VanillaHudLayers.MISC_OVERLAYS}; if the 26.2 Fabric API still calls it
+ * {@code VanillaHudElements.MISC_OVERLAYS}; if the 26.2 Fabric API still calls it
  * {@code IdentifiedLayer}, change the import plus the one constant reference and
  * nothing else. The legacy fallback would be
  * {@code HudRenderCallback.EVENT.register((ctx, tickCounter) -> renderAll(ctx, tickCounter))}.
@@ -79,7 +79,7 @@ public final class HudManager {
     private static final Logger LOGGER = LoggerFactory.getLogger("cinder-hud");
 
     /** Layer id for the Cinder overlay inside the vanilla LayeredDrawer. */
-    private static final Identifier LAYER_ID = Identifier.of("cinder", "hud");
+private static final Identifier LAYER_ID = Identifier.of("cinder", "hud");
 
     /** Active config file: {@code <run>/config/cinder-hud.json}. */
     private static final String CONFIG_FILE_NAME = "cinder-hud.json";
@@ -414,7 +414,7 @@ public final class HudManager {
     }
 
     /**
-     * Profile names are untrusted input (they come from the editor text field), so
+     * Profile names are untrusted input (they come from the editor Text field), so
      * they are strictly validated: 1-32 chars of letters, digits, space, _ and -.
      * This rules out path traversal (.., /, backslash) by construction.
      */

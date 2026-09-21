@@ -2,10 +2,7 @@
   "required": true,
   "package": "gg.cinder.client.zoom",
   "compatibilityLevel": "JAVA_21",
-  "client": [
-    "ZoomMixin",
-    "MouseScrollMixin"
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

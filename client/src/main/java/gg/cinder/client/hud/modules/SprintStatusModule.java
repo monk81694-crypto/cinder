@@ -1,5 +1,5 @@
 // Cinder client mod -- original code.
-// Sprint/sneak status text, visible only while active.
+// Sprint/sneak status Text, visible only while active.
 package gg.cinder.client.hud.modules;
 
 import gg.cinder.client.hud.HudModule;
@@ -20,14 +20,14 @@ public final class SprintStatusModule extends HudModule {
         if (mc == null || mc.player == null || context == null || mc.textRenderer == null) {
             return;
         }
-        String text = null;
+        String Text = null;
         if (mc.player.isSneaking()) {
-            text = "[Sneaking]";
+            Text = "[Sneaking]";
         } else if (mc.player.isSprinting()) {
-            text = "[Sprinting]";
+            Text = "[Sprinting]";
         }
-        if (text != null) {
-            context.drawText(mc.textRenderer, text, x, y, TEXT_COLOR, true);
+        if (Text != null) {
+            context.drawText(mc.textRenderer, Text, x, y, TEXT_COLOR, true);
         }
     }
 }

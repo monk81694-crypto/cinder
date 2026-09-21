@@ -9,10 +9,10 @@ import net.minecraft.item.ItemStack;
  * line when something is held there.
  *
  * <p>Example: {@code "Oak Planks x64"}. ORIGINAL fair-play code: reads
- * {@code getMainHandStack()} / {@code getOffHandStack()} and draws text only;
+ * {@code getMainHandStack()} / {@code getOffHandStack()} and draws Text only;
  * inventory contents are never touched.</p>
  *
- * <p>No per-frame allocations except the unavoidable text {@code String}s:
+ * <p>No per-frame allocations except the unavoidable Text {@code String}s:
  * one reused {@link StringBuilder} builds each line, no {@code String.format},
  * no iterators. Height stays fixed (two rows); the second row is simply left
  * blank when the offhand is empty.</p>

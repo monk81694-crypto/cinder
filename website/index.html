@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinder — Open Minecraft Launcher for Java Edition</title>
+  <meta name="description" content="Cinder is an open Electron launcher for Minecraft Java: offline profiles plus Microsoft login, Fabric/Quilt auto-install, Modrinth mods, world backups, live server pings, and 3D skin previews.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cinder — Open Minecraft Launcher for Java Edition">
+  <meta property="og:description" content="Offline profiles plus Microsoft login, Fabric/Quilt auto-install, Modrinth mods, world backups, live server pings, and 3D skin previews.">
+  <meta property="og:image" content="og.svg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand-link" href="index.html" aria-label="Cinder home">
+        <span class="brand-chip"><img src="../brand/wordmark.svg" alt="" width="120" height="24"></span>
+        <span aria-hidden="true">Cinder</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav aria-label="Primary">
+        <ul class="nav-list" id="site-nav">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="badge">v2.0.0</span>
+          <span class="wordmark-band"><img src="../brand/wordmark.svg" alt="Cinder wordmark" width="240" height="48"></span>
+          <p class="eyebrow">Open Minecraft launcher</p>
+          <h1 id="hero-title">Launch Minecraft your way — offline or premium.</h1>
+          <p class="lede">Cinder is an open Electron launcher for Minecraft Java, made by radoslavgeme. Offline profiles with a built-in name forge, Microsoft login for premium play, one-click mod loaders, and Discord Rich Presence out of the box.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="download.html">Download Cinder</a>
+            <a class="btn btn-ghost" href="https://github.com/radoslavgeme">GitHub</a>
+          </div>
+          <p class="ver-line">Latest release: <strong>v2.0.0</strong> · Windows, macOS &amp; Linux · Free and open source (MIT)</p>
+        </div>
+        <figure class="hero-shot">
+          <img src="mockups/home.svg" alt="Mockup of the Cinder launcher home screen with account picker, version picker, and launch button" width="880" height="560">
+          <figcaption>Concept mockup of the Cinder Play tab.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="features-title">
+      <div class="wrap">
+        <p class="eyebrow">Why Cinder</p>
+        <h2 id="features-title">Everything you need to play, nothing you have to fight</h2>
+        <ul class="grid-3">
+          <li class="card">
+            <h3><span class="tick" aria-hidden="true">✓</span>Offline + Microsoft sign-in</h3>
+            <p>Offline profiles with a name forge that suggests guaranteed-valid names, plus Microsoft login with automatic token refresh for premium servers like Hypixel.</p>
+          </li>
+          <li class="card">
+            <h3><span class="tick" aria-hidden="true">✓</span>Fabric &amp; Quilt auto-install</h3>
+            <p>Mod loaders install themselves with one toggle — no manual jars, no JSON editing. Forge and NeoForge mismatches get a clear warning instead of a crash.</p>
+          </li>
+          <li class="card">
+            <h3><span class="tick" aria-hidden="true">✓</span>Modrinth mods in-app</h3>
+            <p>Search Modrinth, pick a version, and manage your local list with enable/disable toggles — all without leaving the launcher.</p>
+          </li>
+          <li class="card">
+            <h3><span class="tick" aria-hidden="true">✓</span>World backups &amp; restore</h3>
+            <p>Singleplayer saves listed with size and date. Zip a backup in one click, restore the newest backup later, and your current world is kept as a timestamped copy.</p>
+          </li>
+          <li class="card">
+            <h3><span class="tick" aria-hidden="true">✓</span>Live server pings</h3>
+            <p>Featured networks and your own servers show live players, MOTD, and ping — probed by a fast native helper with a pure-Node fallback, cached for 60 seconds.</p>
+          </li>
+          <li class="card">
+            <h3><span class="tick" aria-hidden="true">✓</span>3D skin previews</h3>
+            <p>Preview any Java username live skin with an auto-spinning 3D view, load your own profile skin, or import a classic 64×64 PNG from disk.</p>
+          </li>
+        </ul>
+        <p class="more-strip">Also inside: the <strong>Cinder Client</strong> HUD mod, JVM presets, one-click diagnostics, and Discord presence. <a href="features.html">Read the full feature tour →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <p class="legal">Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+      <p class="copy">© <span id="year">2026</span> radoslavgeme · Cinder is open source under the MIT license.</p>
+    </div>
+  </footer>
+</body>
+</html>

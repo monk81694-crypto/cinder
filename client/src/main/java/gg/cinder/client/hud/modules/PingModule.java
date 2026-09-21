@@ -14,13 +14,13 @@ import net.minecraft.client.gui.DrawContext;
  * <p>Never crashes on null handler/entry: every dereference is null-guarded
  * and the fallback glyph is drawn instead.</p>
  *
- * <p>No per-frame allocations except the unavoidable text {@code String}:
+ * <p>No per-frame allocations except the unavoidable Text {@code String}:
  * one reused pre-sized {@link StringBuilder}, no {@code String.format}.</p>
  */
 public final class PingModule extends HudModule {
     private static final int TEXT_COLOR = 0xFFFFFFFF;
 
-    private final StringBuilder text = new StringBuilder(24);
+    private final StringBuilder Text = new StringBuilder(24);
 
     public PingModule() {
         super("Ping", 4, 18, 100, 12);
@@ -45,14 +45,14 @@ public final class PingModule extends HudModule {
                 latency = entry.getLatency();
             }
         }
-        text.setLength(0);
-        text.append("Ping: ");
+        Text.setLength(0);
+        Text.append("Ping: ");
         if (latency < 0) {
-            text.append("-");
+            Text.append("-");
         } else {
-            text.append(latency);
-            text.append(" ms");
+            Text.append(latency);
+            Text.append(" ms");
         }
-        context.drawText(mc.textRenderer, text.toString(), x, y, TEXT_COLOR, true);
+        context.drawText(mc.textRenderer, Text.toString(), x, y, TEXT_COLOR, true);
     }
 }

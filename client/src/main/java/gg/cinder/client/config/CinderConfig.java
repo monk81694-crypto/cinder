@@ -33,12 +33,12 @@ import java.util.regex.Pattern;
  *       layout.</li>
  * </ul>
  *
- * <p>All JSON parsing uses Gson (bundled with Minecraft) with pretty
+ * <p>All JSON parsing uses Gson (bundled with MinecraftClient) with pretty
  * printing. A corrupt file never crashes the game: it is backed up next to
  * the original with a {@code .bak} suffix and loading continues with
  * defaults. The merge itself lives in the pure static
  * {@link #mergeShared(JsonObject, JsonObject)} method, which touches no
- * Minecraft classes and is safe to unit test. Only the {@code load()} /
+ * MinecraftClient classes and is safe to unit test. Only the {@code load()} /
  * {@code save()} no-arg overloads resolve paths through
  * {@code FabricLoader}.</p>
  */
@@ -161,7 +161,7 @@ public class CinderConfig {
      * <p>Only {@code hudProfile}, {@code accent} and
      * {@code clientVersion} are copied from {@code shared} to
      * {@code base} (and only when present as strings). Every other key,
-     * notably {@code modules}, is left untouched. Touches no Minecraft
+     * notably {@code modules}, is left untouched. Touches no MinecraftClient
      * classes.</p>
      *
      * @param base the local config tree; mutated and returned (a fresh
@@ -233,11 +233,11 @@ public class CinderConfig {
             if (!Files.isRegularFile(file)) {
                 return null;
             }
-            String text = new String(Files.readAllBytes(file), StandardCharsets.UTF_8);
-            if (text.trim().isEmpty()) {
+            String Text = new String(Files.readAllBytes(file), StandardCharsets.UTF_8);
+            if (Text.trim().isEmpty()) {
                 return null;
             }
-            return GSON.fromJson(text, JsonObject.class);
+            return GSON.fromJson(Text, JsonObject.class);
         } catch (Exception e) {
             backupCorrupt(file);
             System.err.println("[cinder-client] Corrupt JSON at " + file + ", backed up: " + e.getMessage());

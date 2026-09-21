@@ -2,7 +2,7 @@
 // One-click performance pack installer. Downloads well-known open-source
 // performance mods (Sodium, Lithium, FerriteCore, optional Iris) from the
 // Modrinth API into the instance mods folder. Their jars are NEVER bundled in
-// this repo — they are fetched at the user's request, respecting each mod's
+// this repo â€” they are fetched at the user's request, respecting each mod's
 // own license. An undo manifest removes exactly what was installed.
 package gg.cinder.client.perf;
 

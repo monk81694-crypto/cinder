@@ -10,7 +10,7 @@ import net.minecraft.client.gui.DrawContext;
  * line two is the in-game day count {@code "Day 12"}.
  *
  * <p>ORIGINAL fair-play code: {@code java.time.LocalTime.now()} for the wall
- * clock (client-local zone) plus {@code world.getTimeOfDay() / 24000 + 1}
+ * clock (client-local zone) plus {@code world.getDayTime() / 24000 + 1}
  * for the day number (1-indexed so a fresh world shows Day 1, not Day 0).
  * Display only.</p>
  *
@@ -22,7 +22,7 @@ public final class ClockModule extends HudModule {
     private static final int TEXT_COLOR = 0xFFFFFFFF;
     private static final int LINE_H = 10;
 
-    private final StringBuilder text = new StringBuilder(16);
+    private final StringBuilder Text = new StringBuilder(16);
     private final DateTimeFormatter clockFormat = DateTimeFormatter.ofPattern("HH:mm");
 
     private String cachedClock = "--:--";
@@ -48,14 +48,14 @@ public final class ClockModule extends HudModule {
             cachedClock = LocalTime.now().format(clockFormat);
             lastClockMs = nowMs;
         }
-        text.setLength(0);
-        text.append(cachedClock);
-        context.drawText(mc.textRenderer, text.toString(), x, y, TEXT_COLOR, true);
+        Text.setLength(0);
+        Text.append(cachedClock);
+        context.drawText(mc.textRenderer, Text.toString(), x, y, TEXT_COLOR, true);
 
         long day = mc.world.getTimeOfDay() / 24000L + 1L;
-        text.setLength(0);
-        text.append("Day ");
-        text.append(day);
-        context.drawText(mc.textRenderer, text.toString(), x, y + LINE_H, TEXT_COLOR, true);
+        Text.setLength(0);
+        Text.append("Day ");
+        Text.append(day);
+        context.drawText(mc.textRenderer, Text.toString(), x, y + LINE_H, TEXT_COLOR, true);
     }
 }

@@ -1,0 +1,114 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img">
+<title>Cinder launcher — mods mockup</title>
+<defs>
+<linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#FFA14D"/>
+<stop offset="1" stop-color="#FF6B1A"/>
+</linearGradient>
+</defs>
+<rect x="0" y="0" width="1280" height="800" fill="#06060F"/>
+<rect x="0" y="0" width="1280" height="56" fill="#0A0A18"/>
+<line x1="0" y1="56" x2="1280" y2="56" stroke="#8C8CFF" stroke-width="1" opacity="0.16"/>
+<circle cx="32" cy="28" r="6" fill="#FF6B1A"/>
+<circle cx="52" cy="28" r="6" fill="#FFD479"/>
+<circle cx="72" cy="28" r="6" fill="#7DFF9A"/>
+<g font-family="Consolas, Menlo, monospace">
+<text x="100" y="34" font-size="17" font-weight="bold" fill="#E8E8F5">Cinder</text>
+<text x="180" y="33" font-size="11" fill="#8F8FB0">mods</text>
+</g>
+<rect x="1140" y="15" width="108" height="26" rx="13" fill="none" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<text x="1194" y="33" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="11" fill="#8F8FB0">v0.1.0</text>
+<rect x="0" y="56" width="200" height="744" fill="#12122B"/>
+<line x1="200" y1="56" x2="200" y2="800" stroke="#8C8CFF" stroke-width="1" opacity="0.09"/>
+<g transform="translate(28,76) scale(0.625)">
+<polyline points="16,16 40,32" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+<polyline points="40,32 16,48" fill="none" stroke="#FF6B1A" stroke-width="8" stroke-linecap="square"/>
+</g>
+<text x="76" y="103" font-family="Consolas, Menlo, monospace" font-size="13" font-weight="bold" fill="#E8E8F5">CINDER</text>
+<g font-family="Consolas, Menlo, monospace" font-size="12">
+<rect x="16" y="124" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="137" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="150" fill="#8F8FB0">Play</text>
+<rect x="16" y="172" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="185" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="198" fill="#8F8FB0">Servers</text>
+<rect x="16" y="220" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="233" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="246" fill="#8F8FB0">Versions</text>
+<rect x="16" y="268" width="168" height="40" rx="8" fill="#181836" stroke="#FF6B1A" stroke-width="1.5"/>
+<rect x="16" y="268" width="4" height="40" fill="#FF6B1A"/>
+<rect x="30" y="281" width="14" height="14" fill="#FF6B1A"/>
+<text x="54" y="294" font-weight="bold" fill="#E8E8F5">Mods</text>
+<rect x="16" y="316" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="329" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="342" fill="#8F8FB0">Skins</text>
+<rect x="16" y="364" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="377" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="390" fill="#8F8FB0">Settings</text>
+</g>
+<circle cx="32" cy="742" r="5" fill="#7DFF9A"/>
+<text x="46" y="746" font-family="Consolas, Menlo, monospace" font-size="11" fill="#8F8FB0">Online</text>
+<g font-family="Consolas, Menlo, monospace">
+<text x="232" y="122" font-size="22" font-weight="bold" fill="#E8E8F5">Mods</text>
+<text x="232" y="144" font-size="13" fill="#8F8FB0">Fabric · 1.21.1 · 3 of 4 enabled</text>
+<rect x="232" y="160" width="420" height="44" rx="7" fill="rgba(0,0,0,0.5)" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<text x="250" y="188" font-size="13" fill="#55556F">Search mods…</text>
+<rect x="668" y="160" width="76" height="44" rx="22" fill="url(#emberGrad)"/>
+<text x="706" y="188" text-anchor="middle" font-size="12" font-weight="bold" fill="#101024">All</text>
+<rect x="752" y="160" width="92" height="44" rx="22" fill="none" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<text x="798" y="188" text-anchor="middle" font-size="12" fill="#E8E8F5">Fabric</text>
+<rect x="852" y="160" width="92" height="44" rx="22" fill="none" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<text x="898" y="188" text-anchor="middle" font-size="12" fill="#E8E8F5">Forge</text>
+<rect x="232" y="224" width="660" height="108" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="252" y="244" width="48" height="48" rx="7" fill="#181836" stroke="#FF6B1A" stroke-width="2"/>
+<circle cx="276" cy="268" r="12" fill="#FF6B1A" opacity="0.85"/>
+<text x="316" y="264" font-size="14" font-weight="bold" fill="#E8E8F5">Sodium</text>
+<text x="316" y="284" font-size="12" fill="#8F8FB0">Frame-rate boost · rendering</text>
+<rect x="316" y="292" width="96" height="24" rx="5" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.16"/>
+<text x="364" y="309" text-anchor="middle" font-size="11" fill="#7DFF9A">1.21.1 ✓</text>
+<rect x="798" y="262" width="42" height="22" rx="11" fill="#FF6B1A"/>
+<circle cx="830" cy="273" r="9" fill="#E8E8F5"/>
+<rect x="232" y="344" width="660" height="108" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="252" y="364" width="48" height="48" rx="7" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<rect x="262" y="374" width="28" height="10" fill="#5CC8FF" opacity="0.9"/>
+<rect x="262" y="388" width="18" height="10" fill="#5CC8FF" opacity="0.6"/>
+<text x="316" y="384" font-size="14" font-weight="bold" fill="#E8E8F5">Iris Shaders</text>
+<text x="316" y="404" font-size="12" fill="#8F8FB0">Shader support · visuals</text>
+<rect x="316" y="412" width="96" height="24" rx="5" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.16"/>
+<text x="364" y="429" text-anchor="middle" font-size="11" fill="#7DFF9A">1.21.1 ✓</text>
+<rect x="798" y="382" width="42" height="22" rx="11" fill="#FF6B1A"/>
+<circle cx="830" cy="393" r="9" fill="#E8E8F5"/>
+<rect x="232" y="464" width="660" height="108" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="252" y="484" width="48" height="48" rx="7" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<rect x="262" y="494" width="28" height="28" fill="none" stroke="#FFD479" stroke-width="3"/>
+<text x="316" y="504" font-size="14" font-weight="bold" fill="#E8E8F5">Xaero Minimap</text>
+<text x="316" y="524" font-size="12" fill="#8F8FB0">World map · waypoints</text>
+<rect x="316" y="532" width="96" height="24" rx="5" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.16"/>
+<text x="364" y="549" text-anchor="middle" font-size="11" fill="#FFD479">1.21 ⚠</text>
+<rect x="798" y="502" width="42" height="22" rx="11" fill="#FF6B1A"/>
+<circle cx="830" cy="513" r="9" fill="#E8E8F5"/>
+<rect x="232" y="584" width="660" height="108" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09" opacity="0.75"/>
+<rect x="252" y="604" width="48" height="48" rx="7" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.16"/>
+<rect x="262" y="626" width="28" height="8" fill="#55556F"/>
+<text x="316" y="624" font-size="14" font-weight="bold" fill="#8F8FB0">Replay Mod</text>
+<text x="316" y="644" font-size="12" fill="#55556F">Timelines · disabled</text>
+<rect x="316" y="652" width="96" height="24" rx="5" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.16"/>
+<text x="364" y="669" text-anchor="middle" font-size="11" fill="#FF8F8F">1.20 ✕</text>
+<rect x="798" y="622" width="42" height="22" rx="11" fill="none" stroke="#55556F" stroke-width="2"/>
+<circle cx="810" cy="633" r="9" fill="#55556F"/>
+<rect x="924" y="224" width="324" height="200" rx="10" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<text x="952" y="262" font-size="11" font-weight="bold" letter-spacing="2" fill="#FFA14D">LOADER</text>
+<rect x="952" y="276" width="180" height="36" rx="18" fill="#181836" stroke="#FF6B1A" stroke-width="1.5"/>
+<text x="1042" y="299" text-anchor="middle" font-size="12" font-weight="bold" fill="#E8E8F5">Fabric Loader</text>
+<text x="952" y="336" font-size="12" fill="#8F8FB0">0.16.9 · stable</text>
+<text x="952" y="358" font-size="11" fill="#55556F">3 of 4 enabled</text>
+<rect x="952" y="370" width="268" height="12" rx="6" fill="rgba(0,0,0,0.5)"/>
+<rect x="952" y="370" width="201" height="12" rx="6" fill="url(#emberGrad)"/>
+<rect x="924" y="440" width="324" height="140" rx="10" fill="#181836" stroke="#FF6B1A" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="952" y="476" font-size="13" font-weight="bold" fill="#FFD479">2 updates ready</text>
+<text x="952" y="498" font-size="12" fill="#8F8FB0">Sodium · Iris Shaders</text>
+<rect x="952" y="512" width="160" height="40" rx="7" fill="url(#emberGrad)"/>
+<text x="1032" y="537" text-anchor="middle" font-size="12" font-weight="bold" fill="#101024">UPDATE ALL</text>
+</g>
+<text x="640" y="784" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="11" fill="#55556F">Mockup — illustrative, not a screenshot</text>
+</svg>

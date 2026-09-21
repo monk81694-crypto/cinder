@@ -24,7 +24,7 @@ import net.minecraft.client.gui.DrawContext;
  * <p>No per-frame allocations: counters, previous-state flags and one reused
  * {@link StringBuilder} are fields; {@code render} performs no {@code new},
  * no {@code String.format}, no boxing. (One {@code String} from
- * {@code StringBuilder#toString()} per frame is unavoidable -- the text API
+ * {@code StringBuilder#toString()} per frame is unavoidable -- the Text API
  * takes a {@code String}.)</p>
  */
 public final class CpsModule extends HudModule {
@@ -33,7 +33,7 @@ public final class CpsModule extends HudModule {
 
     private final CpsCounter left = new CpsCounter();
     private final CpsCounter right = new CpsCounter();
-    private final StringBuilder text = new StringBuilder(32);
+    private final StringBuilder Text = new StringBuilder(32);
 
     private boolean prevLeftPressed;
     private boolean prevRightPressed;
@@ -63,13 +63,13 @@ public final class CpsModule extends HudModule {
         }
         prevRightPressed = rightPressed;
 
-        text.setLength(0);
-        text.append("LMB ");
-        appendOneDecimal(text, left.getCps());
-        text.append(" | RMB ");
-        appendOneDecimal(text, right.getCps());
+        Text.setLength(0);
+        Text.append("LMB ");
+        appendOneDecimal(Text, left.getCps());
+        Text.append(" | RMB ");
+        appendOneDecimal(Text, right.getCps());
 
-        context.drawText(mc.textRenderer, text.toString(), x, y, TEXT_COLOR, true);
+        context.drawText(mc.textRenderer, Text.toString(), x, y, TEXT_COLOR, true);
     }
 
     /**

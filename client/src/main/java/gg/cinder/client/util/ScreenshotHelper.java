@@ -66,7 +66,7 @@ public final class ScreenshotHelper {
             File dir = new File(mc.runDirectory, "screenshots");
             File[] pngs = dir.listFiles((d, name) -> name.toLowerCase().endsWith(".png"));
             if (pngs == null || pngs.length == 0) {
-                return "No screenshots yet — press F2 first";
+                return "No screenshots yet -- press F2 first";
             }
             Arrays.sort(pngs, Comparator.comparingLong(File::lastModified));
             BufferedImage image = ImageIO.read(pngs[pngs.length - 1]);

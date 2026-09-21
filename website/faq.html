@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinder FAQ — Accounts, Mods, Files, Updates</title>
+<meta name="description" content="Cinder FAQ: offline accounts, Microsoft login, Fabric/Quilt/Forge support, price, file locations, updates, offline play and Java — short factual answers for v2.0.0.">
+<meta property="og:title" content="Cinder FAQ">
+<meta property="og:description" content="Short factual answers: accounts, mod loaders, files, updates, offline play and Java for Cinder v2.0.0.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06060f">
+<link rel="icon" href="../brand/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+.pg-page{background:var(--bg0,#06060f);color:var(--text,#e8e8f5);font-family:var(--font,Consolas,Menlo,monospace);min-height:100vh}
+.pg-skip{position:absolute;left:-9999px}
+.pg-skip:focus{position:static;display:inline-block;padding:8px}
+.pg-nav{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;max-width:880px;margin:0 auto;padding:16px 20px}
+.pg-nav a{color:var(--dim,#8f8fb0);text-decoration:none}
+.pg-nav a[aria-current="page"]{color:var(--text,#e8e8f5);text-decoration:underline}
+.pg-brand{font-weight:800;color:var(--text,#e8e8f5)}
+.pg-wrap{max-width:880px;margin:0 auto;padding:12px 20px 64px;line-height:1.65}
+.pg-wrap a{color:var(--cyan,#5cc8ff)}
+.pg-faq{border:1px solid var(--stroke-soft,rgba(140,140,255,.09));border-radius:8px;padding:12px 16px;margin:12px 0}
+.pg-faq summary{cursor:pointer;font-weight:700}
+.pg-note{color:var(--dim,#8f8fb0);font-size:13px}
+.pg-footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--stroke-soft,rgba(140,140,255,.09));color:var(--dim,#8f8fb0);font-size:12px;line-height:1.6}
+.pg-footer a{color:var(--cyan,#5cc8ff)}
+</style>
+</head>
+<body>
+<div class="pg-page">
+<a class="pg-skip" href="#main">Skip to content</a>
+<header><nav class="pg-nav" aria-label="Primary">
+<a class="pg-brand" href="index.html">Cinder</a>
+<a href="download.html">Download</a>
+<a href="docs.html">Docs</a>
+<a href="changelog.html">Changelog</a>
+<a href="faq.html" aria-current="page">FAQ</a>
+</nav></header>
+<main id="main" class="pg-wrap">
+<h1>Frequently asked questions</h1>
+<details class="pg-faq" open>
+<summary>Can I play with an offline account (no Microsoft login)?</summary>
+<p>Yes. Cinder supports offline profiles, including the built-in name forge that generates valid 3–16 character names. Offline names work on offline-mode servers, LAN worlds, and self-hosted servers with online-mode=false.</p>
+</details>
+<details class="pg-faq">
+<summary>Does Microsoft login work for premium servers like Hypixel?</summary>
+<p>Yes. Sign in with a Microsoft account that owns Minecraft Java to join any server, including online-mode premium servers such as Hypixel. The token auto-refreshes on launch.</p>
+</details>
+<details class="pg-faq">
+<summary>Which mod loaders are supported?</summary>
+<p>Fabric and Quilt are auto-installed by the launcher. Forge and NeoForge show mismatch warnings, so they need manual setup.</p>
+</details>
+<details class="pg-faq">
+<summary>Is Cinder free?</summary>
+<p>Yes, Cinder itself is free and open source (MIT). Note that Minecraft Java itself requires a paid account for online-mode servers.</p>
+</details>
+<details class="pg-faq">
+<summary>Where are my files stored?</summary>
+<p>In a portable game directory, by default <code>%AppData%/.cinder-minecraft</code> (changeable in Settings). Saves live in <code>&lt;gameDir&gt;/saves</code> and backups in <code>&lt;gameDir&gt;/backups</code>.</p>
+</details>
+<details class="pg-faq">
+<summary>How do I update Cinder?</summary>
+<p>Cinder checks GitHub releases on launch (toggle in Settings → Performance and updates) with a Check now button. Download the newest installer from the <a href="download.html">Download page</a> — your worlds, mods and settings live in the portable game directory, not in the installer.</p>
+</details>
+<details class="pg-faq">
+<summary>Does Cinder work offline?</summary>
+<p>Mostly yes: singleplayer, LAN, and offline-mode servers work, and the version list has an offline fallback. You cannot join online-mode servers with an offline name — they reject it with “Invalid session”.</p>
+</details>
+<details class="pg-faq">
+<summary>What Java version do I need?</summary>
+<p>Usually none to install yourself — Cinder auto-detects installed Javas and picks per version (26.x to Java 25, 1.20.5 / 1.21+ to Java 21, 1.18+ to Java 17). You can override it in the Settings Java dropdown.</p>
+</details>
+<p class="pg-note">Still stuck? See <a href="docs.html#pg-trouble">Docs → Troubleshooting</a>.</p>
+</main>
+<footer class="pg-footer">
+<p>Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+<p>Cinder v2.0.0 by radoslavgeme · <a href="https://github.com/radoslavgeme/cinder">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

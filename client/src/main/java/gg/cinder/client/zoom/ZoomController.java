@@ -21,8 +21,8 @@ public final class ZoomController {
     private static final int FOV_FLOOR = 30;
 
     private static KeyBinding zoomKey;
-    private static KeyBinding widerKey;
-    private static KeyBinding narrowerKey;
+private static KeyBinding widerKey;
+private static KeyBinding narrowerKey;
     private static double divisor = 4.0;
     private static double current = -1.0;
     private static int baseFov = 70;
