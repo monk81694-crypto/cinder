@@ -349,3 +349,67 @@ section { margin-bottom: 56px; }
   .nav-list a { display: block; padding: 10px 12px; }
   .grid-3 { grid-template-columns: 1fr; }
 }
+
+/* Cinder v2.0.0 — modern polish (proprietary). Flat charcoal + ember, no frameworks. */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--stroke-soft);
+  background:
+    radial-gradient(600px 220px at 15% 0%, rgba(255, 107, 26, 0.12), transparent 70%),
+    radial-gradient(500px 200px at 90% 20%, rgba(140, 140, 255, 0.12), transparent 70%),
+    var(--bg);
+}
+.hero-grid { position: relative; z-index: 1; }
+.hero h1 {
+  background: linear-gradient(90deg, var(--text) 30%, #FFB37A 70%, var(--ember) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.badge {
+  background: var(--ember-soft);
+  box-shadow: 0 0 0 1px rgba(255, 107, 26, 0.35), 0 4px 18px rgba(255, 107, 26, 0.25);
+}
+.btn-primary {
+  background: linear-gradient(180deg, #FF8A3D, var(--ember) 60%, var(--ember-deep));
+  box-shadow: 0 8px 26px rgba(255, 107, 26, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(0);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 26, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn-ghost {
+  background: rgba(232, 232, 245, 0.04);
+  backdrop-filter: blur(6px);
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--t) var(--ease), border-color var(--t) var(--ease), box-shadow var(--t) var(--ease);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--ember), transparent);
+  opacity: 0;
+  transition: opacity var(--t) var(--ease);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 107, 26, 0.25);
+}
+.card:hover::before { opacity: 1; }
+.hero-shot {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(140, 140, 255, 0.12);
+}
+.wordmark-band {
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.ver-line strong { color: var(--ember); }
+.site-footer .copy { color: var(--dim); }
+.lede { text-wrap: pretty; }
