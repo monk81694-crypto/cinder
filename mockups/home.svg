@@ -1,0 +1,120 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img">
+<title>Cinder launcher — home mockup</title>
+<defs>
+<linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#181836"/>
+<stop offset="1" stop-color="#101024"/>
+</linearGradient>
+<linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#FFA14D"/>
+<stop offset="1" stop-color="#FF6B1A"/>
+</linearGradient>
+<linearGradient id="progGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#E06A1F"/>
+<stop offset="0.6" stop-color="#FFA14D"/>
+<stop offset="1" stop-color="#FF7A59"/>
+</linearGradient>
+</defs>
+<rect x="0" y="0" width="1280" height="800" fill="#06060F"/>
+<g stroke="#8C8CFF" stroke-width="1" opacity="0.05">
+<line x1="400" y1="56" x2="400" y2="800"/>
+<line x1="640" y1="56" x2="640" y2="800"/>
+<line x1="880" y1="56" x2="880" y2="800"/>
+<line x1="1120" y1="56" x2="1120" y2="800"/>
+</g>
+<rect x="0" y="0" width="1280" height="56" fill="#0A0A18"/>
+<line x1="0" y1="56" x2="1280" y2="56" stroke="#8C8CFF" stroke-width="1" opacity="0.16"/>
+<circle cx="32" cy="28" r="6" fill="#FF6B1A"/>
+<circle cx="52" cy="28" r="6" fill="#FFD479"/>
+<circle cx="72" cy="28" r="6" fill="#7DFF9A"/>
+<g font-family="Consolas, Menlo, monospace">
+<text x="100" y="34" font-size="17" font-weight="bold" fill="#E8E8F5">Cinder</text>
+<text x="180" y="33" font-size="11" fill="#8F8FB0">home</text>
+</g>
+<rect x="1140" y="15" width="108" height="26" rx="13" fill="none" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<text x="1194" y="33" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="11" fill="#8F8FB0">v0.1.0</text>
+<rect x="0" y="56" width="200" height="744" fill="#12122B"/>
+<line x1="200" y1="56" x2="200" y2="800" stroke="#8C8CFF" stroke-width="1" opacity="0.09"/>
+<g transform="translate(28,76) scale(0.625)">
+<polyline points="16,16 40,32" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+<polyline points="40,32 16,48" fill="none" stroke="#FF6B1A" stroke-width="8" stroke-linecap="square"/>
+</g>
+<text x="76" y="103" font-family="Consolas, Menlo, monospace" font-size="13" font-weight="bold" fill="#E8E8F5">CINDER</text>
+<g font-family="Consolas, Menlo, monospace" font-size="12">
+<rect x="16" y="124" width="168" height="40" rx="8" fill="#181836" stroke="#FF6B1A" stroke-width="1.5"/>
+<rect x="16" y="124" width="4" height="40" fill="#FF6B1A"/>
+<rect x="30" y="137" width="14" height="14" fill="#FF6B1A"/>
+<text x="54" y="150" font-weight="bold" fill="#E8E8F5">Play</text>
+<rect x="16" y="172" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="185" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="198" fill="#8F8FB0">Servers</text>
+<rect x="16" y="220" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="233" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="246" fill="#8F8FB0">Versions</text>
+<rect x="16" y="268" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="281" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="294" fill="#8F8FB0">Mods</text>
+<rect x="16" y="316" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="329" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="342" fill="#8F8FB0">Skins</text>
+<rect x="16" y="364" width="168" height="40" rx="8" fill="none" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="30" y="377" width="14" height="14" fill="none" stroke="#8F8FB0" stroke-width="2"/>
+<text x="54" y="390" fill="#8F8FB0">Settings</text>
+</g>
+<circle cx="32" cy="742" r="5" fill="#7DFF9A"/>
+<text x="46" y="746" font-family="Consolas, Menlo, monospace" font-size="11" fill="#8F8FB0">Online</text>
+<rect x="232" y="88" width="1016" height="230" rx="10" fill="url(#heroGrad)" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<text x="264" y="132" font-family="Consolas, Menlo, monospace" font-size="11" font-weight="bold" letter-spacing="2" fill="#FFA14D">EMBER BUILD — READY</text>
+<text x="264" y="174" font-family="Consolas, Menlo, monospace" font-size="30" font-weight="bold" fill="#E8E8F5">Play in one click</text>
+<text x="264" y="202" font-family="Consolas, Menlo, monospace" font-size="13" fill="#8F8FB0">Instances, servers and mods in a single window.</text>
+<rect x="264" y="228" width="180" height="48" rx="7" fill="url(#emberGrad)"/>
+<text x="354" y="258" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="14" font-weight="bold" fill="#101024">LAUNCH</text>
+<rect x="460" y="228" width="180" height="48" rx="7" fill="none" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<text x="550" y="258" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="13" font-weight="bold" fill="#E8E8F5">BROWSE</text>
+<g opacity="0.95">
+<rect x="1010" y="130" width="72" height="72" rx="8" fill="#181836" stroke="#FF6B1A" stroke-width="2"/>
+<rect x="1094" y="150" width="56" height="56" rx="8" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<rect x="1030" y="196" width="88" height="88" rx="8" fill="#12122B" stroke="#FFD479" stroke-width="2"/>
+<rect x="1052" y="218" width="44" height="44" fill="#FF6B1A" opacity="0.85"/>
+</g>
+<g font-family="Consolas, Menlo, monospace">
+<rect x="232" y="342" width="328" height="104" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<text x="256" y="372" font-size="10" font-weight="bold" letter-spacing="1" fill="#55556F">PING</text>
+<text x="256" y="404" font-size="22" font-weight="bold" fill="#7DFF9A">12 ms</text>
+<text x="256" y="426" font-size="11" fill="#8F8FB0">eu-west relay</text>
+<rect x="576" y="342" width="328" height="104" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<text x="600" y="372" font-size="10" font-weight="bold" letter-spacing="1" fill="#55556F">INSTANCES</text>
+<text x="600" y="404" font-size="22" font-weight="bold" fill="#E8E8F5">3 ready</text>
+<text x="600" y="426" font-size="11" fill="#8F8FB0">1.21.1 + 2 modded</text>
+<rect x="920" y="342" width="328" height="104" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<text x="944" y="372" font-size="10" font-weight="bold" letter-spacing="1" fill="#55556F">MODS</text>
+<text x="944" y="404" font-size="22" font-weight="bold" fill="#FFD479">48 active</text>
+<text x="944" y="426" font-size="11" fill="#8F8FB0">Fabric Loader</text>
+</g>
+<g font-family="Consolas, Menlo, monospace">
+<rect x="232" y="470" width="496" height="150" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="256" y="494" width="96" height="96" rx="8" fill="#181836" stroke="#FF6B1A" stroke-width="2"/>
+<rect x="272" y="510" width="64" height="16" fill="#FF6B1A" opacity="0.7"/>
+<rect x="272" y="532" width="40" height="12" fill="#8F8FB0" opacity="0.6"/>
+<text x="368" y="516" font-size="14" font-weight="bold" fill="#E8E8F5">Survival Realm</text>
+<text x="368" y="538" font-size="12" fill="#8F8FB0">play.example.net</text>
+<text x="368" y="560" font-size="11" font-weight="bold" fill="#7DFF9A">● 214 online</text>
+<rect x="368" y="572" width="120" height="32" rx="7" fill="none" stroke="#FF6B1A" stroke-width="1.5"/>
+<text x="428" y="593" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFA14D">JOIN</text>
+<rect x="752" y="470" width="496" height="150" rx="8" fill="#101024" stroke="#8C8CFF" stroke-opacity="0.09"/>
+<rect x="776" y="494" width="96" height="96" rx="8" fill="#181836" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<circle cx="824" cy="542" r="22" fill="none" stroke="#FFD479" stroke-width="3"/>
+<text x="888" y="516" font-size="14" font-weight="bold" fill="#E8E8F5">Patch notes</text>
+<text x="888" y="538" font-size="12" fill="#8F8FB0">Faster loads, new themes</text>
+<text x="888" y="560" font-size="11" fill="#55556F">2 min read</text>
+<rect x="888" y="572" width="120" height="32" rx="7" fill="none" stroke="#8C8CFF" stroke-opacity="0.32"/>
+<text x="948" y="593" text-anchor="middle" font-size="12" font-weight="bold" fill="#E8E8F5">READ</text>
+</g>
+<g font-family="Consolas, Menlo, monospace">
+<text x="232" y="660" font-size="11" fill="#8F8FB0">Downloading 1.21.1 … 68%</text>
+<rect x="232" y="672" width="1016" height="14" rx="7" fill="rgba(0,0,0,0.5)" stroke="#8C8CFF" stroke-opacity="0.16"/>
+<rect x="232" y="672" width="691" height="14" rx="7" fill="url(#progGrad)"/>
+<text x="232" y="706" font-size="11" fill="#55556F">1.2 GB of 1.8 GB — fabric-loader-0.16</text>
+</g>
+<text x="640" y="784" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="11" fill="#55556F">Mockup — illustrative, not a screenshot</text>
+</svg>

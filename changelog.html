@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinder Changelog — All Versions (v2.0.0)</title>
+<meta name="description" content="Full Cinder Minecraft launcher changelog: v2.0.0 adds Skins and Worlds tabs, live server pings, JVM presets and release tooling. Faithful copy of CHANGELOG.md.">
+<meta property="og:title" content="Cinder Changelog">
+<meta property="og:description" content="What changed in every Cinder release, from the 1.0.0 baseline to v2.0.0.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06060f">
+<link rel="icon" href="../brand/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+.pg-page{background:var(--bg0,#06060f);color:var(--text,#e8e8f5);font-family:var(--font,Consolas,Menlo,monospace);min-height:100vh}
+.pg-skip{position:absolute;left:-9999px}
+.pg-skip:focus{position:static;display:inline-block;padding:8px}
+.pg-nav{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;max-width:880px;margin:0 auto;padding:16px 20px}
+.pg-nav a{color:var(--dim,#8f8fb0);text-decoration:none}
+.pg-nav a[aria-current="page"]{color:var(--text,#e8e8f5);text-decoration:underline}
+.pg-brand{font-weight:800;color:var(--text,#e8e8f5)}
+.pg-wrap{max-width:880px;margin:0 auto;padding:12px 20px 64px;line-height:1.65}
+.pg-wrap a{color:var(--cyan,#5cc8ff)}
+.pg-entry{border:1px solid var(--stroke-soft,rgba(140,140,255,.09));border-radius:8px;padding:14px 16px;margin:16px 0}
+.pg-tag{display:inline-block;border:1px solid var(--stroke,rgba(140,140,255,.16));border-radius:99px;padding:2px 12px;margin-right:8px}
+.pg-note{color:var(--dim,#8f8fb0);font-size:13px}
+.pg-footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--stroke-soft,rgba(140,140,255,.09));color:var(--dim,#8f8fb0);font-size:12px;line-height:1.6}
+.pg-footer a{color:var(--cyan,#5cc8ff)}
+</style>
+</head>
+<body>
+<div class="pg-page">
+<a class="pg-skip" href="#main">Skip to content</a>
+<header><nav class="pg-nav" aria-label="Primary">
+<a class="pg-brand" href="index.html">Cinder</a>
+<a href="download.html">Download</a>
+<a href="docs.html">Docs</a>
+<a href="changelog.html" aria-current="page">Changelog</a>
+<a href="faq.html">FAQ</a>
+</nav></header>
+<main id="main" class="pg-wrap">
+<h1>Changelog</h1>
+<p>All notable changes to Cinder. Copied faithfully from <code>CHANGELOG.md</code> in the repo — no versions added or removed.</p>
+<section class="pg-entry" aria-labelledby="pg-v200">
+<h2 id="pg-v200"><span class="pg-tag">2.0.0</span> 2026-09-20</h2>
+<h3>Added</h3>
+<ul>
+<li>Skins tab: 3D preview (skinview3d) by username via <code>skin:get</code>, My profile skin, Upload PNG (64x64), Save PNG.</li>
+<li>Worlds tab: saves list with size/mtime, zip backup / restore / delete via <code>adm-zip</code> (<code>worlds:list</code>, <code>worlds:backup</code>, <code>worlds:restore</code>, <code>worlds:delete</code>).</li>
+<li>Live server pings via <code>server:status</code>: Rust <code>slp-probe</code> in <code>tools/slp-probe</code> (fast path) with pure-Node SLP fallback; 60 s cache.</li>
+<li>Performance and updates settings: JVM presets <code>balanced</code> / <code>performance</code> / <code>latency</code> (<code>jvmPreset</code>), snowfall toggle (<code>showSnow</code>), update checker (<code>checkUpdates</code> + <code>update:check</code>), copy diagnostics (<code>diag:run</code>).</li>
+<li>Scripts: <code>scripts/dev.ps1</code> (install + start), <code>scripts/build.ps1</code> (warn-only typecheck + must-pass tests), <code>npm run typecheck</code> (<code>tsc --noEmit</code>).</li>
+<li>Tools: <code>tools/assets.py --check</code> / <code>--fetch</code> (validate + re-download <code>assets/img/*</code>), <code>tools/release</code> (<code>go run .</code> release readiness check).</li>
+<li>Deps: <code>adm-zip</code>, <code>skinview3d</code>, <code>three</code>; <code>bin/</code> shipped in electron-builder files.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Version bumped to 2.0.0 (<code>package.json</code>, <code>index.html</code> pills, README title).</li>
+<li>Settings extended with <code>jvmPreset</code>, <code>showSnow</code>, <code>checkUpdates</code> (sanitized + persisted).</li>
+<li>Features list + docs expanded for Skins, Worlds, pings, performance, scripts, tools.</li>
+</ul>
+<h3>Notes</h3>
+<ul>
+<li>Binaries are optional: app runs without <code>bin/slp-probe</code>; JS fallbacks cover pings.</li>
+<li>Rust toolchain required only to rebuild <code>slp-probe</code> (<code>cargo build --release</code>, copy to <code>bin/</code>).</li>
+<li>Go toolchain required only to run <code>tools/release</code> (<code>go run .</code>).</li>
+<li>Rust/Go toolchains are NOT required to run the app (<code>npm install</code> + <code>npm start</code> is enough).</li>
+</ul>
+</section>
+<section class="pg-entry" aria-labelledby="pg-v100">
+<h2 id="pg-v100"><span class="pg-tag">1.0.0</span> baseline</h2>
+<ul>
+<li>Initial Electron launcher: Play / Servers / Versions / Profiles / Mods / Settings / Logs, offline + Microsoft auth, name forge, Fabric/Quilt auto-install, Modrinth browser, Discord Rich Presence, portable game dir, Java auto-detect.</li>
+</ul>
+</section>
+<p class="pg-note">Get the latest build on the <a href="download.html">Download</a> page.</p>
+</main>
+<footer class="pg-footer">
+<p>Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+<p>Cinder v2.0.0 by radoslavgeme · <a href="https://github.com/radoslavgeme/cinder">GitHub</a></p>
+</footer>
+</div>
+</body>
+</html>

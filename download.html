@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Cinder — Free Minecraft Launcher (Windows, macOS, Linux)</title>
+<meta name="description" content="Download Cinder v2.0.0, the free open Minecraft Java launcher: Windows installer, macOS disk image, Linux AppImage. Java auto-detected, about 200 MB on first launch.">
+<meta property="og:title" content="Download Cinder v2.0.0">
+<meta property="og:description" content="Free open Minecraft Java launcher for Windows, macOS and Linux. Java auto-detected, about 200 MB on first launch.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06060f">
+<link rel="icon" href="../brand/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../brand/tokens.css">
+<style>
+.pg-page{background:var(--bg0,#06060f);color:var(--text,#e8e8f5);font-family:var(--font,Consolas,Menlo,monospace);min-height:100vh}
+.pg-skip{position:absolute;left:-9999px}
+.pg-skip:focus{position:static;display:inline-block;padding:8px}
+.pg-nav{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;max-width:880px;margin:0 auto;padding:16px 20px}
+.pg-nav a{color:var(--dim,#8f8fb0);text-decoration:none}
+.pg-nav a[aria-current="page"]{color:var(--text,#e8e8f5);text-decoration:underline}
+.pg-brand{font-weight:800;color:var(--text,#e8e8f5)}
+.pg-wrap{max-width:880px;margin:0 auto;padding:12px 20px 64px;line-height:1.65}
+.pg-wrap a{color:var(--cyan,#5cc8ff)}
+.pg-os-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:12px 0}
+.pg-os{display:block;padding:14px;border:1px solid var(--stroke,rgba(140,140,255,.16));border-radius:8px;text-decoration:none;color:var(--text,#e8e8f5)}
+.pg-os small{color:var(--dim,#8f8fb0)}
+.pg-os-current{border-color:var(--mint,#6a6af5);box-shadow:0 0 0 1px var(--mint,#6a6af5)}
+.pg-release,.pg-fallback{border:1px solid var(--stroke-soft,rgba(140,140,255,.09));border-radius:8px;padding:14px 16px;margin:16px 0}
+.pg-fallback{border-color:var(--stroke,rgba(140,140,255,.16))}
+.pg-note{color:var(--dim,#8f8fb0);font-size:13px}
+.pg-footer{max-width:880px;margin:0 auto;padding:20px;border-top:1px solid var(--stroke-soft,rgba(140,140,255,.09));color:var(--dim,#8f8fb0);font-size:12px;line-height:1.6}
+.pg-footer a{color:var(--cyan,#5cc8ff)}
+</style>
+</head>
+<body>
+<div class="pg-page">
+<a class="pg-skip" href="#main">Skip to content</a>
+<header><nav class="pg-nav" aria-label="Primary">
+<a class="pg-brand" href="index.html">Cinder</a>
+<a href="download.html" aria-current="page">Download</a>
+<a href="docs.html">Docs</a>
+<a href="changelog.html">Changelog</a>
+<a href="faq.html">FAQ</a>
+</nav></header>
+<main id="main" class="pg-wrap">
+<h1>Download Cinder</h1>
+<p>Cinder <strong>v2.0.0</strong> is a free, open Minecraft Java launcher by <strong>radoslavgeme</strong>: offline profiles, Microsoft login, mods, skins, worlds and Discord status. Pick your system below.</p>
+<h2>1. Choose your system</h2>
+<p id="pg-detected" class="pg-note" role="status">Detecting your system…</p>
+<div class="pg-os-grid">
+<a class="pg-os" data-os="windows" href="https://github.com/radoslavgeme/cinder/releases/latest"><strong>Windows</strong><br><small>Installer (.exe)</small></a>
+<a class="pg-os" data-os="macos" href="https://github.com/radoslavgeme/cinder/releases/latest"><strong>macOS</strong><br><small>Disk image (.dmg)</small></a>
+<a class="pg-os" data-os="linux" href="https://github.com/radoslavgeme/cinder/releases/latest"><strong>Linux</strong><br><small>AppImage</small></a>
+</div>
+<h2>2. Latest release (live from GitHub)</h2>
+<div id="pg-release" class="pg-release" aria-live="polite"><p>Loading latest release info…</p></div>
+<noscript><p class="pg-note">Live lookup needs JavaScript. Use the direct link below instead.</p></noscript>
+<h2>3. Direct link (always works)</h2>
+<section class="pg-fallback" aria-label="Offline fallback">
+<p><a href="https://github.com/radoslavgeme/cinder/releases/latest">https://github.com/radoslavgeme/cinder/releases/latest</a></p>
+<p class="pg-note">v2.0.0 — if the API is unreachable use this link.</p>
+<p class="pg-note">Checksums: SHA-256 published with each release.</p>
+</section>
+<h2>System requirements</h2>
+<ul>
+<li><strong>Windows</strong> 10 or newer (installer .exe), <strong>macOS</strong> (.dmg), or <strong>Linux</strong> (AppImage).</li>
+<li><strong>Java:</strong> auto-detected — no manual install needed for most players. Cinder picks per version: Minecraft 26.x goes to Java 25, 1.20.5 / 1.21 and newer go to Java 21, 1.18 and newer go to Java 17.</li>
+<li><strong>Disk and network:</strong> about 200 MB downloads on first launch for the game version. Game files live in a portable folder (default <code>%AppData%/.cinder-minecraft</code>).</li>
+<li><strong>Node.js:</strong> not needed — end users just run the installer. Node and <code>npm install</code> are only for building from source (see <a href="docs.html">Docs</a>).</li>
+<li><strong>Accounts:</strong> play offline on offline-mode servers, or sign in with Microsoft (owns Minecraft Java) for online-mode servers such as Hypixel.</li>
+</ul>
+</main>
+<footer class="pg-footer">
+<p>Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+<p>Cinder v2.0.0 by radoslavgeme · <a href="https://github.com/radoslavgeme/cinder">GitHub</a></p>
+</footer>
+</div>
+<script>
+(function () {
+  var os = "";
+  try {
+    var ua = navigator.userAgent || "", pf = navigator.platform || "";
+    if (/Win/i.test(pf) || /Windows/i.test(ua)) { os = "windows"; }
+    else if (/Mac/i.test(pf) || /Macintosh|Mac OS/i.test(ua)) { os = "macos"; }
+    else if (/Linux/i.test(pf) || /Linux|X11/i.test(ua)) { os = "linux"; }
+  } catch (e) { os = ""; }
+  var labels = { windows: "Windows", macos: "macOS", linux: "Linux" };
+  var btns = document.querySelectorAll(".pg-os");
+  var i;
+  for (i = 0; i < btns.length; i++) {
+    if (btns[i].getAttribute("data-os") === os) {
+      btns[i].classList.add("pg-os-current");
+      btns[i].setAttribute("aria-current", "true");
+    }
+  }
+  var note = document.getElementById("pg-detected");
+  if (note) {
+    note.textContent = os
+      ? ("Detected system: " + labels[os] + " (highlighted below).")
+      : "Could not auto-detect your system — pick one below.";
+  }
+  var box = document.getElementById("pg-release");
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+  function showError(msg) {
+    if (box) { box.innerHTML = "<p>" + esc(msg) + " Use the direct link below.</p>"; }
+  }
+  function pointButtons(assets) {
+    for (var k = 0; k < btns.length; k++) {
+      (function (btn) {
+        var want = btn.getAttribute("data-os");
+        var ext = want === "windows" ? ".exe" : (want === "macos" ? ".dmg" : ".appimage");
+        for (var m = 0; m < assets.length; m++) {
+          var nm = (assets[m].name || "").toLowerCase();
+          if (nm.slice(-ext.length) === ext && assets[m].browser_download_url) {
+            btn.href = assets[m].browser_download_url;
+            break;
+          }
+        }
+      })(btns[k]);
+    }
+  }
+  try {
+    var ctrl = ("AbortController" in window) ? new AbortController() : null;
+    var timer = null;
+    if (ctrl) {
+      timer = setTimeout(function () { try { ctrl.abort(); } catch (e) {} }, 8000);
+    }
+    var opts = { headers: { "Accept": "application/vnd.github+json" } };
+    if (ctrl) { opts.signal = ctrl.signal; }
+    fetch("https://api.github.com/repos/radoslavgeme/cinder/releases", opts).then(function (res) {
+      if (timer) { clearTimeout(timer); }
+      if (!res.ok) { throw new Error("HTTP " + res.status); }
+      return res.json();
+    }).then(function (data) {
+      var rel = (data && data.length) ? data[0] : data;
+      if (!rel || !rel.tag_name) { showError("No releases found."); return; }
+      var html = "<p><strong>" + esc(rel.tag_name) + "</strong>";
+      if (rel.name && rel.name !== rel.tag_name) { html += " — " + esc(rel.name); }
+      if (rel.published_at) { html += " <span>" + esc(rel.published_at.slice(0, 10)) + "</span>"; }
+      html += "</p>";
+      var assets = rel.assets || [];
+      if (assets.length) {
+        html += "<ul>";
+        for (var j = 0; j < assets.length; j++) {
+          html += '<li><a href="' + esc(assets[j].browser_download_url) + '">' + esc(assets[j].name) + "</a></li>";
+        }
+        html += "</ul>";
+        pointButtons(assets);
+      } else if (rel.html_url) {
+        html += '<p><a href="' + esc(rel.html_url) + '">Open release page</a></p>';
+      }
+      box.innerHTML = html;
+    }).catch(function (err) {
+      if (timer) { clearTimeout(timer); }
+      var why = (err && err.name === "AbortError") ? "timed out" : ((err && err.message) ? err.message : "network error");
+      showError("Could not load release info (" + why + ").");
+    });
+  } catch (e) {
+    showError("Live lookup is unavailable in this browser.");
+  }
+})();
+</script>
+</body>
+</html>
