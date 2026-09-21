@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinder Features — Launcher + In-Game Client</title>
+  <meta name="description" content="Full tour of Cinder v2.0.0: offline and Microsoft profiles, Fabric/Quilt auto-install, Modrinth mods, world backups, live server pings and 3D skins.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cinder Features — Launcher + In-Game Client">
+  <meta property="og:description" content="Offline and Microsoft profiles, one-click loaders, Modrinth mods, world backups, live pings and 3D skins.">
+  <meta property="og:image" content="og.svg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand-link" href="index.html" aria-label="Cinder home">
+        <span class="brand-chip"><img src="../brand/wordmark.svg" alt="" width="120" height="24"></span>
+        <span aria-hidden="true">Cinder</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav aria-label="Primary">
+        <ul class="nav-list" id="site-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html" aria-current="page">Features</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <p class="eyebrow">Feature tour</p>
+      <h1>Launcher + in-game client, mapped end to end</h1>
+      <p class="lede">Everything below ships in Cinder v2.0.0 and is verified against the app. Mockups are illustrative, not screenshots.</p>
+
+      <h2 id="launcher">The launcher</h2>
+      <ul class="grid-3">
+        <li class="card">
+          <h3>Offline + Microsoft profiles</h3>
+          <p>Local nicknames with a name forge that suggests guaranteed-valid names, plus Microsoft login with automatic token refresh. Click any profile to make it active.</p>
+        </li>
+        <li class="card">
+          <h3>Versions, honestly cached</h3>
+          <p>Live Mojang list with a 6-hour cache and an offline fallback. Search, filter by release/snapshot/beta/alpha, see installed badges, uninstall in one click.</p>
+        </li>
+        <li class="card">
+          <h3>Fabric &amp; Quilt auto-install</h3>
+          <p>Pick a loader and it installs itself for the selected version on next launch. Forge/NeoForge files are detected and flagged with a clear warning.</p>
+        </li>
+        <li class="card">
+          <h3>Modrinth mods in-app</h3>
+          <p>Search Modrinth, pick an exact file with a version picker, toggle mods on/off without deleting them, or drop in your own .jars.</p>
+        </li>
+        <li class="card">
+          <h3>World backups &amp; restore</h3>
+          <p>Singleplayer saves with size and date. Zip backups, restore the newest one (your current world is kept as a timestamped copy), delete with confirmation.</p>
+        </li>
+        <li class="card">
+          <h3>Live server pings</h3>
+          <p>Featured networks show live players, MOTD and latency, refreshed with a 60-second cache. Paste any Java server IP for quick-join on launch.</p>
+        </li>
+        <li class="card">
+          <h3>3D skin previews</h3>
+          <p>Auto-spinning 3D view for any Java username, your active profile, or a 64×64 PNG from disk. Textures are cached for a day and work offline after first fetch.</p>
+        </li>
+        <li class="card">
+          <h3>Performance &amp; diagnostics</h3>
+          <p>JVM presets (Balanced, G1GC, ZGC with a Java-21 guard), per-version Java auto-pick, update checker, and one-click diagnostics copy for support.</p>
+        </li>
+        <li class="card">
+          <h3>Discord presence, zero setup</h3>
+          <p>Keep the Discord desktop app open and your profile shows Cinder automatically — in game it switches to version, player and server.</p>
+        </li>
+      </ul>
+      <figure class="hero-shot">
+        <img src="mockups/mods.svg" alt="Mockup of the Cinder mods tab with loader picker and mod list" width="880" height="560">
+        <figcaption>Concept mockup of the Mods tab.</figcaption>
+      </figure>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="changelog.html">Changelog</a></li>
+          <li><a href="docs.html">Docs</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <p class="legal">Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+      <p class="copy">© <span id="year">2026</span> radoslavgeme · Cinder is open source under the MIT license.</p>
+    </div>
+  </footer>
+</body>
+</html>

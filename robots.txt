@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yespleaselet2-create.github.io/cinder/sitemap.xml
