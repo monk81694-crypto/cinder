@@ -105,7 +105,7 @@ document.querySelectorAll('.nav').forEach(btn => { btn.onclick = () => gotoTab(b
 document.addEventListener('keydown', (e) => {
   if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { e.preventDefault(); doLaunch(); return; }
   if (!(e.ctrlKey || e.metaKey)) return;
-  const map = { 1: 'play', 2: 'versions', 3: 'accounts', 4: 'mods', 5: 'settings', 6: 'logs', 7: 'skins', 8: 'worlds', 9: 'client' };
+  const map = { 1: 'play', 2: 'versions', 3: 'accounts', 4: 'mods', 5: 'settings', 6: 'logs', 7: 'skins', 8: 'worlds' };
   if (map[e.key]) { e.preventDefault(); gotoTab(map[e.key]); }
 });
 
@@ -1012,14 +1012,12 @@ function syncStage() {
     const sub = $('launch-sub');
     if (sub) {
       const L = settings && settings.loader && settings.loader !== 'vanilla' ? settings.loader : 'vanilla';
-      const C = clientState && clientState.installed ? ' +client' : '';
-      sub.textContent = selectedVersion ? `${selectedVersion} · ${L}${C}` : 'pick a version';
+      sub.textContent = selectedVersion ? `${selectedVersion} · ${L}` : 'pick a version';
     }
     const il = $('instance-label');
     if (il) {
       const L = settings && settings.loader && settings.loader !== 'vanilla' ? ' · ' + settings.loader : '';
-      const C = clientState && clientState.installed ? ' · client' : '';
-      il.textContent = (selectedVersion || 'no version') + L + C;
+      il.textContent = (selectedVersion || 'no version') + L;
     }
     const tn = $('top-account-name'), ta = $('top-account-avatar'), ts = $('top-account-sub');
     if (tn) tn.textContent = acc ? acc.name : 'No account';
@@ -1105,8 +1103,7 @@ function paletteCommands() {
     { icon: '☺', label: 'Open Skins', hint: 'Ctrl+7', run: () => { gotoTab('skins'); if (typeof initSkinTabViewer === 'function') initSkinTabViewer(); } },
     { icon: '📦', label: 'Open Worlds', hint: 'Ctrl+8', run: () => { gotoTab('worlds'); if (typeof loadWorlds === 'function') loadWorlds(); } },
     { icon: '⟳', label: 'Check for updates now', hint: '', run: () => { if (typeof checkUpdatesFlow === 'function') checkUpdatesFlow(true); } },
-    { icon: '⧉', label: 'Copy diagnostics', hint: '', run: () => { if (typeof runDiagCopy === 'function') runDiagCopy(); } },
-    { icon: '⚡', label: 'Open Client', hint: 'Ctrl+9', run: () => { gotoTab('client'); if (typeof refreshClientState === 'function') refreshClientState(); } }
+    { icon: '⧉', label: 'Copy diagnostics', hint: '', run: () => { if (typeof runDiagCopy === 'function') runDiagCopy(); } }
   ];
 }
 function openPalette() {
@@ -1544,83 +1541,6 @@ function skinTabLazyInit() {
   });
 })();
 
-/* ============ Cinder v2.0 — Client tab (in-game mod install + profiles) ============ */
-let clientState = null;
-async function refreshClientState() {
-  try {
-    clientState = await api.clientStatus(settings.gameDir);
-  } catch (e) {
-    clientState = { installed: false, error: String((e && e.message) || e) };
-  }
-  paintClientState();
-}
-function paintClientState() {
-  const el = $('client-status'), badge = $('client-state-badge');
-  if (!clientState) return;
-  if (el) {
-    el.textContent = clientState.installed
-      ? 'Installed: ' + (clientState.file || 'cinder-client jar present')
-      : (clientState.error ? 'Not installed (' + clientState.error + ')' : 'Not installed.');
-  }
-  if (badge) {
-    badge.textContent = clientState.installed ? 'active' : 'not installed';
-    badge.className = 'badge ' + (clientState.installed ? 'badge-active' : '');
-  }
-}
-async function loadHudProfiles() {
-  const sel = $('hud-profile-list');
-  if (!sel) return;
-  sel.innerHTML = '';
-  try {
-    const names = await api.clientProfiles(settings.gameDir);
-    if (!names.length) {
-      sel.innerHTML = '<option value="">No profiles yet — create one in-game</option>';
-      return;
-    }
-    names.forEach((n) => {
-      const opt = document.createElement('option');
-      opt.value = n; opt.textContent = n;
-      sel.appendChild(opt);
-    });
-  } catch (e) {
-    sel.innerHTML = '<option value="">Failed to list profiles</option>';
-  }
-}
-if ($('client-install')) $('client-install').onclick = async () => {
-  const btn = $('client-install');
-  btn.disabled = true;
-  try {
-    gotoTab('logs');
-    const r = await api.clientInstall({ gameDir: settings.gameDir });
-    toast('Client installed', 'ok');
-    log('> Client installed: ' + (r && r.file));
-    await refreshClientState();
-    await loadHudProfiles();
-  } catch (e) { toast(e.message, 'error'); }
-  finally { btn.disabled = false; }
-};
-if ($('client-update')) $('client-update').onclick = async () => {
-  const btn = $('client-update');
-  btn.disabled = true;
-  try {
-    gotoTab('logs');
-    await api.clientUpdate({ gameDir: settings.gameDir });
-    toast('Client updated', 'ok');
-    await refreshClientState();
-  } catch (e) { toast(e.message, 'error'); }
-  finally { btn.disabled = false; }
-};
-if ($('hud-profile-refresh')) $('hud-profile-refresh').onclick = () => loadHudProfiles();
-if ($('hud-profile-set')) $('hud-profile-set').onclick = async () => {
-  const sel = $('hud-profile-list');
-  const name = sel ? sel.value : '';
-  if (!name) { toast('Pick a profile first', 'error'); return; }
-  try {
-    await api.clientProfileSet({ gameDir: settings.gameDir, name });
-    toast('Active HUD profile: ' + name, 'ok');
-  } catch (e) { toast(e.message, 'error'); }
-};
-
 /* initial paint for new surfaces */
 try { renderServers(); syncStage(); } catch {}
 
@@ -1632,8 +1552,6 @@ try { renderServers(); syncStage(); } catch {}
   await loadVersions();
   await Promise.all([loadMods(), loadWorlds()]);
   bootHook().catch(() => {});
-  await refreshClientState();
-  await loadHudProfiles();
   try { setGameRunning(await api.isGameRunning()); } catch {}
   pushPresence('play');
   forgeNames();

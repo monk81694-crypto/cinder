@@ -1,9 +1,0 @@
-{
-  "required": true,
-  "package": "gg.cinder.client.zoom",
-  "compatibilityLevel": "JAVA_21",
-  "client": [],
-  "injectors": {
-    "defaultRequire": 1
-  }
-}
