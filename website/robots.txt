@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://radoslavgeme.github.io/cinder/sitemap.xml
+Sitemap: https://yespleaselet2-create.github.io/cinder/sitemap.xml

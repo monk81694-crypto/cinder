@@ -145,7 +145,7 @@ function getDefaultSettings() {
     loaderProfiles: {},
     discordPresence: true,
     discordClientId: '',
-    discordDownloadUrl: 'https://github.com/radoslavgeme/cinder',
+    discordDownloadUrl: 'https://github.com/yespleaselet2-create/cinder',
     launchAction: 'minimize', // 'minimize' | 'hide' | 'nothing'
     launchTimeoutSec: 30,
     accent: 'indigo', // 'indigo' | 'mint' | 'ember' | 'violet' | 'glacier' | 'rose'
@@ -1027,9 +1027,9 @@ ipcMain.handle('update:check', async () => {
   };
   let current = '0.0.0';
   try { current = require('./package.json').version || current; } catch {}
-  const fallbackUrl = 'https://github.com/radoslavgeme/cinder/releases/latest';
+  const fallbackUrl = 'https://github.com/yespleaselet2-create/cinder/releases/latest';
   try {
-    const res = await fetch('https://api.github.com/repos/radoslavgeme/cinder/releases/latest', {
+    const res = await fetch('https://api.github.com/repos/yespleaselet2-create/cinder/releases/latest', {
       headers: { 'User-Agent': 'Cinder', Accept: 'application/vnd.github+json' },
       signal: AbortSignal.timeout(10000)
     });

@@ -43,7 +43,7 @@ let startTimestamp = null;
 let retryTimer = null;
 // Download button shown on the profile activity. Placeholder until release:
 // point it at your real download page in Settings → Discord anytime.
-let downloadUrl = 'https://github.com/radoslavgeme/cinder';
+let downloadUrl = 'https://github.com/yespleaselet2-create/cinder';
 
 function getClientId(settings) {
   const manual = String((settings && settings.discordClientId) || '').trim();
