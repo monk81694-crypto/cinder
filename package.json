@@ -2,9 +2,9 @@
   "name": "cinder-launcher",
   "productName": "Cinder",
   "version": "2.0.0",
-  "description": "Cinder - open Minecraft launcher (offline + Microsoft login, mods, servers, Discord presence)",
+  "description": "Cinder - proprietary Minecraft launcher (offline + Microsoft login, mods, servers, Discord presence)",
   "author": "radoslavgeme",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

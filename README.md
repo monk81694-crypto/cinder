@@ -2,9 +2,9 @@
 
 ![Cinder logo](brand/logo-light.svg)
 
-Made by **radoslavgeme**.
+Made by **radoslavgeme**. © 2026 radoslavgeme. All rights reserved.
 
-Cinder is an open Electron launcher for Minecraft Java: offline profiles with a
+Cinder is a proprietary Electron launcher for Minecraft Java: offline profiles with a
 built-in **name forge**, Microsoft login for premium play, Fabric/Quilt loader
 auto-install, Modrinth mods, server quick-join, and **Discord Rich Presence**
 (“Playing Cinder” + logo + Download button on your profile).
@@ -186,6 +186,9 @@ cd tools/release; go run .
   - `npm audit`; re-run before release.
 
 ## Disclaimer
+
+© 2026 radoslavgeme. All rights reserved. Unauthorized copying, modification
+or distribution prohibited. Cinder is proprietary software — not open source.
 
 Not affiliated with Mojang, Microsoft, or Discord. Minecraft requires a paid
 Java account for online-mode servers. Offline mode is for servers you own or
