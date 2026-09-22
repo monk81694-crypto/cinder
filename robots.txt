@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yespleaselet2-create.github.io/cinder/sitemap.xml
+Sitemap: https://monk81694-crypto.github.io/cinder/sitemap.xml
