@@ -1,0 +1,78 @@
+﻿/* Cinder brand tokens — single source of truth for the website phase.
+
+   Mirrors styles.css :root (lines 4-51) + body[data-accent] overrides (lines 691-716).
+   Copy-paste of hex/rgba values — do NOT edit values here to reskin the launcher.
+   To reskin: change styles.css, then port the same values here.
+   Default accent indigo = :root values (index.html body data-accent=indigo, no override block).
+   Website usage: <link rel=stylesheet href=brand/tokens.css> then use var(--bg0), var(--mint), etc.
+   Supports body[data-accent=mint|ember|violet|glacier|rose] + prefers-reduced-motion + body.reduce-motion + body[data-snow=off] (see docs/BRAND.md section 7).
+*/
+
+:root {
+  --bg0: #06060f;
+  --bg1: #0a0a18;
+  --bg2: #101024;
+  --rail: #12122b;
+  --glass: rgba(16, 16, 38, 0.7);
+  --card: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.01));
+  --card-solid: #101024;
+  --card-2: #181836;
+  --inset: rgba(0, 0, 0, 0.5);
+  --stroke: rgba(140, 140, 255, 0.16);
+  --stroke-soft: rgba(140, 140, 255, 0.09);
+  --stroke-hi: rgba(140, 140, 255, 0.32);
+  --text: #e8e8f5;
+  --dim: #8f8fb0;
+  --faint: #55556f;
+  --mint: #6a6af5;
+  --mint-2: #9d9dff;
+  --mint-deep: #4343d8;
+  --cyan: #5cc8ff;
+  --violet: #a78bff;
+  --gold: #ffd479;
+  --red: #ff8f8f;
+  --green: #7dff9a;
+  --mint-ink: #e8e8ff;
+  --glow: rgba(106, 106, 245, 0.55);
+  --glow-soft: rgba(106, 106, 245, 0.16);
+  --sh-lg: 0 24px 60px rgba(0, 0, 0, 0.6);
+  --sh-md: 0 12px 36px rgba(0, 0, 0, 0.5);
+  --sh-sm: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --r-xl: 10px;
+  --r-lg: 8px;
+  --r-md: 6px;
+  --r-sm: 5px;
+  --font: "Cascadia Code", "JetBrains Mono", "SFMono-Regular", Consolas, Menlo, monospace;
+  --mono: "Cascadia Code", "JetBrains Mono", "SFMono-Regular", Consolas, Menlo, monospace;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --spring: cubic-bezier(0.34, 1.4, 0.4, 1);
+  --t: 160ms;
+}
+
+/* Accent themes — mirror styles.css 692-716. Only these 7 vars change per theme. */
+body[data-accent="mint"] {
+  --mint: #3ef2b6; --mint-2: #7dffd2; --mint-deep: #12bd85;
+  --cyan: #4cc9ff; --mint-ink: #03241a;
+  --glow: rgba(62, 242, 182, 0.5); --glow-soft: rgba(62, 242, 182, 0.16);
+}
+body[data-accent="ember"] {
+  --mint: #ffa14d; --mint-2: #ffd479; --mint-deep: #e06a1f;
+  --cyan: #ff7a59; --mint-ink: #ffd9ad;
+  --glow: rgba(255, 161, 77, 0.5); --glow-soft: rgba(255, 161, 77, 0.16);
+}
+body[data-accent="violet"] {
+  --mint: #b49bff; --mint-2: #d3c4ff; --mint-deep: #7c5cf0;
+  --cyan: #6fd3ff; --mint-ink: #e2d8ff;
+  --glow: rgba(180, 155, 255, 0.5); --glow-soft: rgba(180, 155, 255, 0.16);
+}
+body[data-accent="glacier"] {
+  --mint: #5cd6ff; --mint-2: #b8ecff; --mint-deep: #1f9fe0;
+  --cyan: #7dffd2; --mint-ink: #c8efff;
+  --glow: rgba(92, 214, 255, 0.5); --glow-soft: rgba(92, 214, 255, 0.16);
+}
+body[data-accent="rose"] {
+  --mint: #ff7ab8; --mint-2: #ffb3d6; --mint-deep: #e03c83;
+  --cyan: #ff9a6b; --mint-ink: #ffd3e6;
+  --glow: rgba(255, 122, 184, 0.5); --glow-soft: rgba(255, 122, 184, 0.16);
+}
+
