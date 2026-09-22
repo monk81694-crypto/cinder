@@ -9,8 +9,8 @@
 <meta property="og:description" content="Proprietary Minecraft Java launcher for Windows, macOS and Linux. Java auto-detected, about 200 MB on first launch.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#06060f">
-<link rel="icon" href="../brand/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../brand/tokens.css">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="tokens.css">
 <style>
 .pg-page{background:var(--bg0,#06060f);color:var(--text,#e8e8f5);font-family:var(--font,Consolas,Menlo,monospace);min-height:100vh}
 .pg-skip{position:absolute;left:-9999px}
@@ -62,6 +62,12 @@
 <p><a href="https://github.com/monk81694-crypto/cinder/releases/latest">https://github.com/monk81694-crypto/cinder/releases/latest</a></p>
 <p class="pg-note">v2.0.0 — if the API is unreachable use this link.</p>
 <p class="pg-note">Checksums: SHA-256 published with each release.</p>
+</section>
+<h2>Verify your download (unsigned build)</h2>
+<section class="pg-fallback" aria-label="Integrity and SmartScreen">
+<p>v2.0.0 installers are <strong>unsigned</strong> (no paid certificate), so Windows SmartScreen says “Unknown publisher”. The file is safe — check the hash, then click <strong>More info → Run anyway</strong>.</p>
+<p>SHA-256 (<code>Cinder.Setup.2.0.0.exe</code>):<br><code>AC6EEA24560C0455E5FA73B080E77FB20D22383132CD4E4E4840595AF6EEA957</code></p>
+<p class="pg-note">Check it with: <code>Get-FileHash "Cinder.Setup.2.0.0.exe" -Algorithm SHA256</code>. © 2026 radoslavgeme. All rights reserved.</p>
 </section>
 <h2>System requirements</h2>
 <ul>
