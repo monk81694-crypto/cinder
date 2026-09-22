@@ -21,7 +21,7 @@ legal line is present everywhere, and key color pairs pass WCAG contrast.
 2. Settings → Pages → Deploy from branch → `main`, folder `/website`.
 3. The site goes live at `https://<user>.github.io/<repo>/`.
 4. Then update the placeholder domain in `sitemap.xml` and `robots.txt`
-   (`https://yespleaselet2-create.github.io/cinder/`).
+    (`https://monk81694-crypto.github.io/cinder/`).
 
 ## Netlify
 
