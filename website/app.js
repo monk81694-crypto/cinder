@@ -51,4 +51,7 @@ if(pal){var inp=$("input",pal),list=$(".cmd-list",pal);
  document.addEventListener("keydown",function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();pal.classList.contains("open")?close():open()}else if(e.key==="Escape")close()});
  var pb=$("#open-palette");if(pb)pb.addEventListener("click",open);
 }
+// launcher install buttons
+$$(".launcher-install").forEach(function(btn){btn.addEventListener("click",function(e){e.preventDefault();var loader=btn.dataset.loader;toast("Opening "+loader+" installer...");window.open("https://github.com/monk81694-crypto/cinder/releases/latest","_blank")})});
+
 })();
