@@ -1,0 +1,541 @@
+/* ============================================================
+   Cinder Design Tokens v2.0.0 — CSS Custom Properties
+   Single source of truth for website + launcher
+   Generated from assets/design-tokens.json
+   ============================================================ */
+
+/* ---- Primitive Color Palette ---- */
+:root {
+  /* Ember Scale */
+  --color-ember-50: #FFF3ED;
+  --color-ember-100: #FFE5D0;
+  --color-ember-200: #FFC999;
+  --color-ember-300: #FFA65B;
+  --color-ember-400: #FF8526;
+  --color-ember-500: #FF6B1A;
+  --color-ember-600: #E05C16;
+  --color-ember-700: #C24E0E;
+  --color-ember-800: #9A3E0B;
+  --color-ember-900: #7A3109;
+
+  /* Mint Scale */
+  --color-mint-50: #ECFFF8;
+  --color-mint-100: #D1FFF0;
+  --color-mint-200: #A3FFE1;
+  --color-mint-300: #6AFFCD;
+  --color-mint-400: #3EF2B6;
+  --color-mint-500: #12BD85;
+  --color-mint-600: #0E976A;
+  --color-mint-700: #0B7652;
+  --color-mint-800: #095C42;
+  --color-mint-900: #074A36;
+
+  /* Violet Scale */
+  --color-violet-50: #F5F0FF;
+  --color-violet-100: #E8DFFF;
+  --color-violet-200: #D3C4FF;
+  --color-violet-300: #B49BFF;
+  --color-violet-400: #9A7BFF;
+  --color-violet-500: #855EFF;
+  --color-violet-600: #7048E0;
+  --color-violet-700: #5C3AB8;
+  --color-violet-800: #4A2F92;
+  --color-violet-900: #3D267A;
+
+  /* Glacier Scale */
+  --color-glacier-50: #ECFEFF;
+  --color-glacier-100: #D1F9FF;
+  --color-glacier-200: #B8ECFF;
+  --color-glacier-300: #5CD6FF;
+  --color-glacier-400: #1FAEFF;
+  --color-glacier-500: #0EA5E0;
+  --color-glacier-600: #0B85B8;
+  --color-glacier-700: #096892;
+  --color-glacier-800: #07527A;
+  --color-glacier-900: #064366;
+
+  /* Rose Scale */
+  --color-rose-50: #FFF0F5;
+  --color-rose-100: #FFE0EB;
+  --color-rose-200: #FFB3D6;
+  --color-rose-300: #FF7AB8;
+  --color-rose-400: #FF4D94;
+  --color-rose-500: #E03C83;
+  --color-rose-600: #B8306A;
+  --color-rose-700: #902654;
+  --color-rose-800: #701E42;
+  --color-rose-900: #5A1836;
+
+  /* Charcoal Scale */
+  --color-charcoal-50: #E8E8F5;
+  --color-charcoal-100: #D0D0E8;
+  --color-charcoal-200: #A9A9C6;
+  --color-charcoal-300: #8F8FB0;
+  --color-charcoal-400: #7C7C9C;
+  --color-charcoal-500: #55556F;
+  --color-charcoal-600: #3D3D55;
+  --color-charcoal-700: #2A2A3D;
+  --color-charcoal-800: #1A1A2A;
+  --color-charcoal-900: #101024;
+  --color-charcoal-950: #0A0A18;
+  --color-charcoal-975: #06060F;
+
+  /* Stroke */
+  --color-stroke-subtle: rgba(140, 140, 255, 0.09);
+  --color-stroke-default: rgba(140, 140, 255, 0.16);
+  --color-stroke-strong: rgba(140, 140, 255, 0.32);
+
+  /* Semantic Primitives */
+  --color-success: #7DFF9A;
+  --color-warning: #FFD479;
+  --color-error: #FF8F8F;
+  --color-on-ember: #1A0D02;
+
+  /* Font Families */
+  --font-display: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-body: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+
+  /* Spacing (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Border Radius */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 36px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 24px rgba(255, 107, 26, 0.35);
+  --shadow-glow-soft: 0 0 16px rgba(255, 107, 26, 0.18);
+  --shadow-glow-mint: 0 0 24px rgba(62, 242, 182, 0.35);
+  --shadow-glow-mint-soft: 0 0 16px rgba(62, 242, 182, 0.18);
+
+  /* Transitions */
+  --transition-fast: 100ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-base: 160ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-slow: 240ms cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-spring: 300ms cubic-bezier(0.34, 1.4, 0.4, 1);
+
+  /* Z-Index */
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-modal: 30;
+  --z-popover: 40;
+  --z-tooltip: 50;
+  --z-toast: 60;
+
+  /* ============================================================
+     SEMANTIC TOKENS (Default: Ember Theme)
+     ============================================================ */
+
+  /* Background */
+  --bg-primary: var(--color-charcoal-975);
+  --bg-secondary: var(--color-charcoal-950);
+  --bg-tertiary: var(--color-charcoal-900);
+  --bg-raised: var(--color-charcoal-900);
+  --bg-sunken: var(--color-charcoal-950);
+  --bg-overlay: rgba(6, 6, 15, 0.8);
+
+  /* Border */
+  --border-subtle: var(--color-stroke-subtle);
+  --border-default: var(--color-stroke-default);
+  --border-strong: var(--color-stroke-strong);
+  --border-focus: var(--color-ember-500);
+
+  /* Text */
+  --text-primary: var(--color-charcoal-50);
+  --text-secondary: var(--color-charcoal-200);
+  --text-tertiary: var(--color-charcoal-400);
+  --text-inverse: var(--color-charcoal-975);
+  --text-on-accent: var(--color-on-ember);
+
+  /* Accent (Ember Default) */
+  --accent-primary: var(--color-ember-500);
+  --accent-primary-hover: var(--color-ember-600);
+  --accent-primary-active: var(--color-ember-700);
+  --accent-primary-soft: rgba(255, 107, 26, 0.14);
+  --accent-secondary: var(--color-mint-400);
+  --accent-secondary-hover: var(--color-mint-500);
+  --accent-secondary-active: var(--color-mint-600);
+  --accent-secondary-soft: rgba(62, 242, 182, 0.14);
+
+  /* Status */
+  --status-success: var(--color-success);
+  --status-warning: var(--color-warning);
+  --status-error: var(--color-error);
+  --status-info: var(--color-ember-500);
+
+  /* Typography */
+  --font-family-display: var(--font-display);
+  --font-family-body: var(--font-body);
+  --font-family-mono: var(--font-mono);
+
+  --font-size-display: 56px;
+  --font-size-h1: 44px;
+  --font-size-h2: 32px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-body-large: 18px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-caption: 12px;
+  --font-size-button: 14px;
+  --font-size-label: 11px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.2;
+  --line-height-normal: 1.3;
+  --line-height-relaxed: 1.5;
+  --line-height-loose: 1.65;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  --letter-spacing-wider: 0.1em;
+
+  /* Component Tokens */
+  /* Button */
+  --btn-height-sm: 32px;
+  --btn-height-md: 40px;
+  --btn-height-lg: 48px;
+  --btn-padding-sm: 8px 16px;
+  --btn-padding-md: 12px 20px;
+  --btn-padding-lg: 16px 28px;
+  --btn-font-size-sm: 13px;
+  --btn-font-size-md: 14px;
+  --btn-font-size-lg: 15px;
+  --btn-radius: var(--radius-sm);
+
+  --btn-primary-bg: var(--accent-primary);
+  --btn-primary-bg-hover: var(--accent-primary-hover);
+  --btn-primary-bg-active: var(--accent-primary-active);
+  --btn-primary-text: var(--text-on-accent);
+  --btn-primary-shadow: var(--shadow-glow-soft);
+  --btn-primary-shadow-hover: var(--shadow-glow);
+
+  --btn-secondary-bg: var(--bg-raised);
+  --btn-secondary-bg-hover: var(--bg-tertiary);
+  --btn-secondary-border: var(--border-default);
+  --btn-secondary-border-hover: var(--border-strong);
+  --btn-secondary-text: var(--text-primary);
+
+  --btn-ghost-bg: transparent;
+  --btn-ghost-bg-hover: var(--accent-primary-soft);
+  --btn-ghost-text: var(--text-primary);
+  --btn-ghost-text-hover: var(--accent-primary);
+
+  --btn-destructive-bg: transparent;
+  --btn-destructive-bg-hover: rgba(255, 143, 143, 0.14);
+  --btn-destructive-text: var(--status-error);
+  --btn-destructive-text-hover: var(--status-error);
+
+  /* Input */
+  --input-height: 40px;
+  --input-padding: 10px 14px;
+  --input-font-size: 14px;
+  --input-radius: var(--radius-sm);
+  --input-bg: var(--bg-sunken);
+  --input-border: var(--border-default);
+  --input-border-hover: var(--border-strong);
+  --input-border-focus: var(--border-focus);
+  --input-text: var(--text-primary);
+  --input-placeholder: var(--text-tertiary);
+  --input-shadow-focus: 0 0 0 2px var(--accent-primary-soft);
+
+  /* Card */
+  --card-bg: var(--bg-raised);
+  --card-border: var(--border-default);
+  --card-border-hover: var(--border-strong);
+  --card-radius: var(--radius-md);
+  --card-shadow: var(--shadow-sm);
+  --card-shadow-hover: var(--shadow-md);
+  --card-padding: var(--space-6);
+
+  /* Nav Item (Sidebar) */
+  --nav-padding: 12px 8px;
+  --nav-radius: var(--radius-md);
+  --nav-gap: 8px;
+  --nav-default-bg: transparent;
+  --nav-default-text: var(--text-tertiary);
+  --nav-default-icon: var(--text-tertiary);
+  --nav-hover-bg: var(--accent-primary-soft);
+  --nav-hover-text: var(--text-primary);
+  --nav-hover-icon: var(--accent-secondary);
+  --nav-active-bg: var(--accent-primary-soft);
+  --nav-active-border: 2px solid var(--accent-primary);
+  --nav-active-text: var(--text-inverse);
+  --nav-active-icon: var(--accent-secondary);
+  --nav-active-icon-shadow: var(--shadow-glow-mint-soft);
+
+  /* Badge */
+  --badge-padding: 4px 10px;
+  --badge-radius: var(--radius-full);
+  --badge-font-size: 11px;
+  --badge-font-weight: 700;
+  --badge-letter-spacing: var(--letter-spacing-wide);
+  --badge-default-bg: var(--accent-primary-soft);
+  --badge-default-border: var(--border-default);
+  --badge-default-text: var(--text-tertiary);
+  --badge-success-bg: rgba(125, 255, 154, 0.1);
+  --badge-success-border: rgba(125, 255, 154, 0.45);
+  --badge-success-text: var(--status-success);
+  --badge-warning-bg: rgba(255, 212, 121, 0.1);
+  --badge-warning-border: rgba(255, 212, 121, 0.45);
+  --badge-warning-text: var(--status-warning);
+  --badge-error-bg: rgba(255, 143, 143, 0.1);
+  --badge-error-border: rgba(255, 143, 143, 0.45);
+  --badge-error-text: var(--status-error);
+  --badge-active-bg: var(--accent-primary-soft);
+  --badge-active-border: var(--accent-primary);
+  --badge-active-text: var(--text-inverse);
+
+  /* Chip */
+  --chip-padding: 6px 12px;
+  --chip-radius: var(--radius-full);
+  --chip-font-size: 12px;
+  --chip-font-weight: 700;
+  --chip-default-bg: var(--accent-primary-soft);
+  --chip-default-border: var(--border-default);
+  --chip-default-text: var(--text-tertiary);
+  --chip-hover-bg: rgba(255, 107, 26, 0.2);
+  --chip-hover-border: var(--border-strong);
+  --chip-hover-text: var(--text-primary);
+  --chip-active-bg: rgba(255, 107, 26, 0.3);
+  --chip-active-border: var(--accent-primary);
+  --chip-active-text: var(--text-inverse);
+
+  /* Avatar */
+  --avatar-radius: var(--radius-sm);
+  --avatar-border: var(--border-default);
+  --avatar-bg: var(--bg-sunken);
+
+  /* Modal */
+  --modal-bg: var(--bg-secondary);
+  --modal-border: var(--border-strong);
+  --modal-radius: var(--radius-lg);
+  --modal-shadow: var(--shadow-lg);
+  --modal-max-width: 480px;
+  --modal-padding: var(--space-6);
+
+  /* Toast */
+  --toast-bg: var(--bg-secondary);
+  --toast-border: var(--border-default);
+  --toast-radius: var(--radius-md);
+  --toast-shadow: var(--shadow-md);
+  --toast-padding: 12px 16px;
+  --toast-gap: 12px;
+  --toast-min-width: 280px;
+  --toast-max-width: 400px;
+
+  /* Dropdown */
+  --dropdown-bg: var(--bg-raised);
+  --dropdown-border: var(--border-default);
+  --dropdown-radius: var(--radius-md);
+  --dropdown-shadow: var(--shadow-md);
+  --dropdown-item-padding: 10px 14px;
+  --dropdown-item-hover-bg: var(--accent-primary-soft);
+
+  /* Tabs */
+  --tabs-indicator-height: 2px;
+  --tabs-indicator-bg: var(--accent-primary);
+  --tabs-indicator-radius: var(--radius-full);
+  --tabs-trigger-padding: 10px 16px;
+  --tabs-trigger-font-size: 14px;
+  --tabs-trigger-font-weight: 600;
+  --tabs-trigger-color: var(--text-tertiary);
+  --tabs-trigger-color-active: var(--text-primary);
+
+  /* Progress */
+  --progress-height: 8px;
+  --progress-radius: var(--radius-full);
+  --progress-bg: var(--bg-sunken);
+  --progress-fill-bg: linear-gradient(90deg, var(--accent-primary-active), var(--accent-primary), var(--accent-secondary));
+  --progress-fill-shadow: var(--shadow-glow-soft);
+
+  /* Slider */
+  --slider-track-height: 6px;
+  --slider-track-radius: var(--radius-full);
+  --slider-track-bg: linear-gradient(90deg, var(--accent-primary-active), var(--accent-primary), var(--accent-secondary));
+  --slider-thumb-size: 18px;
+  --slider-thumb-bg: var(--accent-secondary);
+  --slider-thumb-border: 1px solid rgba(0, 0, 0, 0.4);
+  --slider-thumb-shadow: var(--shadow-glow-mint-soft);
+
+  /* Skeleton */
+  --skeleton-bg: linear-gradient(100deg, var(--accent-primary-soft) 40%, rgba(255, 107, 26, 0.2) 50%, var(--accent-primary-soft) 60%);
+  --skeleton-bg-size: 200% 100%;
+  --skeleton-animation: shimmer 1.3s linear infinite;
+  --skeleton-radius: var(--radius-sm);
+  --skeleton-border: var(--border-subtle);
+
+  /* Containers */
+  --container-sm: 640px;
+  --container-md: 880px;
+  --container-lg: 1080px;
+  --container-xl: 1280px;
+}
+
+/* ============================================================
+   ACCENT THEMES (Launcher + Website)
+   Apply via body[data-accent="theme-name"]
+   ============================================================ */
+
+body[data-accent="mint"] {
+  --accent-primary: var(--color-mint-400);
+  --accent-primary-hover: var(--color-mint-500);
+  --accent-primary-active: var(--color-mint-600);
+  --accent-primary-soft: rgba(62, 242, 182, 0.14);
+  --accent-secondary: var(--color-ember-500);
+  --accent-secondary-hover: var(--color-ember-600);
+  --accent-secondary-active: var(--color-ember-700);
+  --accent-secondary-soft: rgba(255, 107, 26, 0.14);
+  --shadow-glow: var(--shadow-glow-mint);
+  --shadow-glow-soft: var(--shadow-glow-mint-soft);
+  --shadow-glow-mint: 0 0 24px rgba(255, 107, 26, 0.35);
+  --shadow-glow-mint-soft: 0 0 16px rgba(255, 107, 26, 0.18);
+}
+
+body[data-accent="violet"] {
+  --accent-primary: var(--color-violet-400);
+  --accent-primary-hover: var(--color-violet-500);
+  --accent-primary-active: var(--color-violet-600);
+  --accent-primary-soft: rgba(180, 155, 255, 0.14);
+  --accent-secondary: var(--color-glacier-400);
+  --accent-secondary-hover: var(--color-glacier-500);
+  --accent-secondary-active: var(--color-glacier-600);
+  --accent-secondary-soft: rgba(92, 214, 255, 0.14);
+  --shadow-glow: 0 0 24px rgba(180, 155, 255, 0.35);
+  --shadow-glow-soft: 0 0 16px rgba(180, 155, 255, 0.18);
+  --shadow-glow-mint: 0 0 24px rgba(92, 214, 255, 0.35);
+  --shadow-glow-mint-soft: 0 0 16px rgba(92, 214, 255, 0.18);
+}
+
+body[data-accent="glacier"] {
+  --accent-primary: var(--color-glacier-400);
+  --accent-primary-hover: var(--color-glacier-500);
+  --accent-primary-active: var(--color-glacier-600);
+  --accent-primary-soft: rgba(92, 214, 255, 0.14);
+  --accent-secondary: var(--color-mint-400);
+  --accent-secondary-hover: var(--color-mint-500);
+  --accent-secondary-active: var(--color-mint-600);
+  --accent-secondary-soft: rgba(62, 242, 182, 0.14);
+  --shadow-glow: 0 0 24px rgba(92, 214, 255, 0.35);
+  --shadow-glow-soft: 0 0 16px rgba(92, 214, 255, 0.18);
+  --shadow-glow-mint: var(--shadow-glow-mint);
+  --shadow-glow-mint-soft: var(--shadow-glow-mint-soft);
+}
+
+body[data-accent="rose"] {
+  --accent-primary: var(--color-rose-400);
+  --accent-primary-hover: var(--color-rose-500);
+  --accent-primary-active: var(--color-rose-600);
+  --accent-primary-soft: rgba(255, 122, 184, 0.14);
+  --accent-secondary: var(--color-ember-500);
+  --accent-secondary-hover: var(--color-ember-600);
+  --accent-secondary-active: var(--color-ember-700);
+  --accent-secondary-soft: rgba(255, 107, 26, 0.14);
+  --shadow-glow: 0 0 24px rgba(255, 122, 184, 0.35);
+  --shadow-glow-soft: 0 0 16px rgba(255, 122, 184, 0.18);
+  --shadow-glow-mint: 0 0 24px rgba(255, 107, 26, 0.35);
+  --shadow-glow-mint-soft: 0 0 16px rgba(255, 107, 26, 0.18);
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+
+.skeleton {
+  background: var(--skeleton-bg);
+  background-size: var(--skeleton-bg-size);
+  animation: var(--skeleton-animation);
+  border-radius: var(--skeleton-radius);
+  border: 1px solid var(--skeleton-border);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-sunken);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border: 2px solid var(--bg-sunken);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary-active);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}

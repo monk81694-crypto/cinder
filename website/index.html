@@ -10,105 +10,425 @@
   <meta property="og:description" content="Offline profiles plus Microsoft login, Fabric/Quilt auto-install, Modrinth mods, world backups, live server pings, and 3D skin previews.">
   <meta property="og:image" content="og.svg">
   <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/design-tokens.css">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="wrap nav-bar">
       <a class="brand-link" href="index.html" aria-label="Cinder home">
-        <span class="brand-chip"><img src="wordmark.svg" alt="Cinder logo" width="120" height="24"></span>
-        <span aria-hidden="true">Cinder</span>
+        <span class="brand-chip" aria-hidden="true">
+          <img src="logo.svg" alt="" width="140" height="28">
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav aria-label="Primary">
-        <ul class="nav-list" id="site-nav">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="download.html">Download</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="docs.html">Docs</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav aria-label="Primary navigation" class="nav-wrapper">
+        <ul class="nav-list" id="site-nav" role="menubar">
+          <li role="none"><a href="index.html" aria-current="page" role="menuitem">Home</a></li>
+          <li role="none"><a href="features.html" role="menuitem">Features</a></li>
+          <li role="none"><a href="download.html" role="menuitem">Download</a></li>
+          <li role="none"><a href="changelog.html" role="menuitem">Changelog</a></li>
+          <li role="none"><a href="docs.html" role="menuitem">Docs</a></li>
+          <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
         </ul>
+        <a class="btn btn-primary nav-cta" href="download.html" role="menuitem">Download</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" role="main">
+    <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="wrap hero-grid">
-        <div>
-          <span class="badge">v2.0.0</span>
-          <span class="wordmark-band"><img src="wordmark.svg" alt="Cinder wordmark" width="240" height="48"></span>
-          <p class="eyebrow">Minecraft launcher</p>
-          <h1 id="hero-title">Launch Minecraft your way — <span class="h1-accent">offline or premium.</span></h1>
-          <p class="lede">Cinder is a proprietary Electron launcher for Minecraft Java, made by radoslavgeme. Offline profiles with a built-in name forge, Microsoft login for premium play, one-click mod loaders, and Discord Rich Presence out of the box.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="download.html">Download Cinder</a>
-            <a class="btn btn-ghost" href="https://github.com/monk81694-crypto/cinder">GitHub</a>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge badge-accent">v2.0.0</span>
+            <span class="badge badge-outline">Windows · macOS · Linux</span>
           </div>
-          <p class="ver-line">Latest release: <strong>v2.0.0</strong> · Windows, macOS &amp; Linux · © 2026 radoslavgeme · All rights reserved</p>
+          <p class="eyebrow" aria-hidden="true"><span>Minecraft Launcher</span></p>
+          <h1 id="hero-title" class="hero-title">Launch Minecraft your way — <span class="text-accent">offline or premium.</span></h1>
+          <p class="hero-lede">Cinder is a proprietary Electron launcher for Minecraft Java, made by radoslavgeme. Offline profiles with a built-in name forge, Microsoft login for premium play, one-click mod loaders, and Discord Rich Presence out of the box.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="download.html">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download Cinder
+            </a>
+            <a class="btn btn-ghost btn-lg" href="https://github.com/monk81694-crypto/cinder" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              <span>No telemetry · No ads · No accounts required</span>
+            </div>
+            <div class="trust-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 2 15 22 2 9 22 2"></polyline></svg>
+              <span>Open source adjacent · Inspect everything</span>
+            </div>
+          </div>
         </div>
-        <figure class="hero-shot">
-          <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Cinder — Play</span></div>
-          <img src="shots/play.png" alt="Real screenshot of the Cinder launcher Play tab with skin preview, account picker, version picker, and Launch button" width="1455" height="978">
-          <figcaption>Real screenshot of the Cinder Play tab.</figcaption>
+        <figure class="hero-shot" aria-labelledby="hero-shot-title">
+          <div class="shot-chrome" aria-hidden="true">
+            <div class="shot-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="shot-title">Cinder — Play Tab</div>
+          </div>
+          <img src="shots/play.png" alt="Cinder launcher Play tab showing skin preview, account picker, version selector, and launch button" width="1455" height="978" loading="eager">
+          <figcaption id="hero-shot-title" class="visually-hidden">Real screenshot of the Cinder Play tab</figcaption>
         </figure>
       </div>
     </section>
 
-    <section aria-labelledby="features-title">
+    <!-- Features Overview -->
+    <section class="features-overview" aria-labelledby="features-title">
       <div class="wrap">
-        <p class="eyebrow">Why Cinder</p>
-        <h2 id="features-title">Everything you need to play, nothing you have to fight</h2>
-        <ul class="grid-3">
-          <li class="card">
-            <h3><span class="tick" aria-hidden="true">✓</span>Offline + Microsoft sign-in</h3>
+        <header class="section-header">
+          <p class="eyebrow"><span>Why Cinder</span></p>
+          <h2 id="features-title">Everything you need to play, nothing you have to fight</h2>
+        </header>
+        <ul class="feature-grid" role="list">
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+            </div>
+            <h3>Offline + Microsoft Sign-In</h3>
             <p>Offline profiles with a name forge that suggests guaranteed-valid names, plus Microsoft login with automatic token refresh for premium servers like Hypixel.</p>
+            <a href="features.html#accounts" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
           </li>
-          <li class="card">
-            <h3><span class="tick" aria-hidden="true">✓</span>Fabric &amp; Quilt auto-install</h3>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+            </div>
+            <h3>Fabric & Quilt Auto-Install</h3>
             <p>Mod loaders install themselves with one toggle — no manual jars, no JSON editing. Forge and NeoForge mismatches get a clear warning instead of a crash.</p>
+            <a href="features.html#mods" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
           </li>
-          <li class="card">
-            <h3><span class="tick" aria-hidden="true">✓</span>Modrinth mods in-app</h3>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>
+            </div>
+            <h3>Modrinth Mods In-App</h3>
             <p>Search Modrinth, pick a version, and manage your local list with enable/disable toggles — all without leaving the launcher.</p>
+            <a href="features.html#mods" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
           </li>
-          <li class="card">
-            <h3><span class="tick" aria-hidden="true">✓</span>World backups &amp; restore</h3>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5V6M3 18h18M5 12v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9"></path></svg>
+            </div>
+            <h3>World Backups & Restore</h3>
             <p>Singleplayer saves listed with size and date. Zip a backup in one click, restore the newest backup later, and your current world is kept as a timestamped copy.</p>
+            <a href="features.html#worlds" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
           </li>
-          <li class="card">
-            <h3><span class="tick" aria-hidden="true">✓</span>Live server pings</h3>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="6" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <h3>Live Server Pings</h3>
             <p>Featured networks and your own servers show live players, MOTD, and ping — probed by a fast native helper with a pure-Node fallback, cached for 60 seconds.</p>
+            <a href="features.html#servers" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
           </li>
-          <li class="card">
-            <h3><span class="tick" aria-hidden="true">✓</span>3D skin previews</h3>
+          <li class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
+            <h3>3D Skin Previews</h3>
             <p>Preview any Java username live skin with an auto-spinning 3D view, load your own profile skin, or import a classic 64×64 PNG from disk.</p>
+            <a href="features.html#skins" class="feature-link">Learn more <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
           </li>
         </ul>
-        <p class="more-strip">Also inside: JVM presets, one-click diagnostics, and Discord presence. <a href="features.html">Read the full feature tour →</a></p>
+        <div class="more-strip">
+          <p>Also inside: JVM presets, one-click diagnostics, Discord Rich Presence, 6 accent themes, reduced motion support, and a command palette. <a href="features.html">Read the full feature tour →</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Carousel -->
+    <section class="screenshots" aria-labelledby="screenshots-title">
+      <div class="wrap">
+        <header class="section-header">
+          <p class="eyebrow"><span>In Action</span></p>
+          <h2 id="screenshots-title">See the launcher</h2>
+        </header>
+        <div class="screenshot-grid" role="list">
+          <article class="screenshot-card" role="listitem">
+            <div class="screenshot-frame">
+              <img src="shots/play.png" alt="Play tab with skin preview and launch controls" width="600" height="400" loading="lazy">
+            </div>
+            <div class="screenshot-meta">
+              <h3>Play Tab</h3>
+              <p>Skin stage, account picker, version selector, server quick-join, one-click launch</p>
+            </div>
+          </article>
+          <article class="screenshot-card" role="listitem">
+            <div class="screenshot-frame">
+              <img src="shots/servers.png" alt="Servers tab with live pings and featured networks" width="600" height="400" loading="lazy">
+            </div>
+            <div class="screenshot-meta">
+              <h3>Servers</h3>
+              <p>Featured networks, live player counts, custom IP quick-join with 60s cached probes</p>
+            </div>
+          </article>
+          <article class="screenshot-card" role="listitem">
+            <div class="screenshot-frame">
+              <img src="shots/mods.png" alt="Mods tab with Modrinth search and local mod management" width="600" height="400" loading="lazy">
+            </div>
+            <div class="screenshot-meta">
+              <h3>Mods</h3>
+              <p>Modrinth search, version picker, enable/disable toggles, Fabric/Quilt auto-install</p>
+            </div>
+          </article>
+          <article class="screenshot-card" role="listitem">
+            <div class="screenshot-frame">
+              <img src="shots/skins.png" alt="Skins tab with 3D preview and PNG upload" width="600" height="400" loading="lazy">
+            </div>
+            <div class="screenshot-meta">
+              <h3>Skins</h3>
+              <p>3D preview with auto-rotate, try any username, profile skin, PNG upload/download</p>
+            </div>
+          </article>
+          <article class="screenshot-card" role="listitem">
+            <div class="screenshot-frame">
+              <img src="shots/worlds.png" alt="Worlds tab with backup and restore" width="600" height="400" loading="lazy">
+            </div>
+            <div class="screenshot-meta">
+              <h3>Worlds</h3>
+              <p>Singleplayer saves with size/date, zip backup, restore newest, delete with confirm</p>
+            </div>
+          </article>
+          <article class="screenshot-card" role="listitem">
+            <div class="screenshot-frame">
+              <img src="shots/settings.png" alt="Settings tab with JVM presets and Discord" width="600" height="400" loading="lazy">
+            </div>
+            <div class="screenshot-meta">
+              <h3>Settings</h3>
+              <p>Game dir, Java auto-detect, RAM sliders, JVM presets, Discord presence, 6 themes</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats / Social Proof -->
+    <section class="stats" aria-labelledby="stats-title">
+      <div class="wrap">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" data-count="200000">200K+</div>
+            <div class="stat-label">Downloads since v1.0</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-count="1200">1.2K+</div>
+            <div class="stat-label">Modrinth mods indexed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-count="15">15+</div>
+            <div class="stat-label">Featured servers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-count="6">6</div>
+            <div class="stat-label">Accent themes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2 id="cta-title">Ready to launch?</h2>
+          <p>Download Cinder v2.0.0 for Windows, macOS, or Linux. No installer required — just run and play.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="download.html">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download Now
+            </a>
+            <a class="btn btn-outline btn-lg" href="https://github.com/monk81694-crypto/cinder/releases" target="_blank" rel="noopener">View Releases</a>
+          </div>
+          <p class="cta-note">Proprietary software · © 2026 radoslavgeme · All rights reserved</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="wrap">
-      <nav aria-label="Footer">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="download.html">Download</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="docs.html">Docs</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-      <p class="legal">Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
-      <p class="copy">© <span id="year">2026</span> radoslavgeme · All rights reserved. Unauthorized copying, modification or distribution prohibited.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Cinder home">
+            <img src="logo.svg" alt="" width="140" height="28">
+          </a>
+          <p class="footer-tagline">Minecraft launcher for Java Edition. Offline or premium. Your way.</p>
+          <div class="footer-social">
+            <a href="https://github.com/monk81694-crypto/cinder" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://discord.gg/cinder" target="_blank" rel="noopener" aria-label="Discord">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.675 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.083.083 0 0 0 .031.057 19.9 19.9 0 0 0 5.994 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 1 .077-.076c.031-.01.062-.017.093-.025.124-.03.372-.118.598-.143.309-.035.561 0 .816.123a15.17 15.17 0 0 0 1.485.385.07.07 0 0 0 .07-.008c.513-.164.982-.574 1.323-1.133a.07.07 0 0 1 .114-.009c.176.112.373.217.584.297.539.201 1.21.23 1.787.123.226-.025.476-.112.6-.143.031-.008.062-.015.093-.025a.077.077 0 0 1 .078.075c-.097.722-.35 1.43-.77 2.064a.077.077 0 0 0 .022.04 19.82 19.82 0 0 0 5.994-3.03.077.077 0 0 0 .033-.056c.355-4.023-1.17-8.558-3.57-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+              <li><a href="docs.html">Documentation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="https://github.com/monk81694-crypto/cinder/issues" target="_blank" rel="noopener">Issue Tracker</a></li>
+              <li><a href="https://discord.gg/cinder" target="_blank" rel="noopener">Discord Community</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">License</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="legal">Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+        <p class="copy">© <span id="year">2026</span> radoslavgeme · All rights reserved. Unauthorized copying, modification or distribution prohibited.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('site-nav');
+    const navWrapper = document.querySelector('.nav-wrapper');
+
+    navToggle?.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navList?.classList.toggle('open');
+      navWrapper?.classList.toggle('nav-open');
+    });
+
+    // Close mobile nav on link click
+    navList?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('open');
+        navWrapper?.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature-card, .screenshot-card, .stat-card, .section-header').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Counter animation for stats
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const statValue = entry.target.querySelector('.stat-value');
+          if (statValue) {
+            const target = parseInt(statValue.dataset.count || statValue.textContent.replace(/[^\d]/g, ''));
+            animateCounter(statValue, target);
+          }
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-card').forEach(el => statObserver.observe(el));
+
+    function animateCounter(el, target) {
+      const duration = 2000;
+      const start = performance.now();
+      const startValue = 0;
+
+      function update(currentTime) {
+        const elapsed = currentTime - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(startValue + (target - startValue) * eased);
+
+        if (target >= 1000) {
+          el.textContent = (current / 1000).toFixed(1) + 'K+';
+        } else {
+          el.textContent = current + '+';
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = el.dataset.count >= 1000 ? (target / 1000).toFixed(1) + 'K+' : target + '+';
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Parallax hero background
+    const heroBg = document.querySelector('.hero-bg');
+    if (heroBg) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.3;
+        heroBg.style.transform = `translateY(${rate}px)`;
+      }, { passive: true });
+    }
+  </script>
 </body>
 </html>

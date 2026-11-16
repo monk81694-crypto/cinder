@@ -10,106 +10,383 @@
   <meta property="og:description" content="Offline and Microsoft profiles, one-click loaders, Modrinth mods, world backups, live pings and 3D skins.">
   <meta property="og:image" content="og.svg">
   <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/design-tokens.css">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="wrap nav-bar">
       <a class="brand-link" href="index.html" aria-label="Cinder home">
-        <span class="brand-chip"><img src="wordmark.svg" alt="Cinder logo" width="120" height="24"></span>
-        <span aria-hidden="true">Cinder</span>
+        <span class="brand-chip" aria-hidden="true">
+          <img src="logo.svg" alt="" width="140" height="28">
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav aria-label="Primary">
-        <ul class="nav-list" id="site-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html" aria-current="page">Features</a></li>
-          <li><a href="download.html">Download</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="docs.html">Docs</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav aria-label="Primary navigation" class="nav-wrapper">
+        <ul class="nav-list" id="site-nav" role="menubar">
+          <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+          <li role="none"><a href="features.html" aria-current="page" role="menuitem">Features</a></li>
+          <li role="none"><a href="download.html" role="menuitem">Download</a></li>
+          <li role="none"><a href="changelog.html" role="menuitem">Changelog</a></li>
+          <li role="none"><a href="docs.html" role="menuitem">Docs</a></li>
+          <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
         </ul>
+        <a class="btn btn-primary nav-cta" href="download.html" role="menuitem">Download</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <div class="wrap">
-      <p class="eyebrow">Feature tour</p>
-      <h1>Launcher mapped end to end</h1>
-      <p class="lede">Everything below ships in Cinder v2.0.0 and is verified against the app. Screenshots are from the real launcher.</p>
+  <main id="main" role="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="eyebrow"><span>Feature Tour</span></p>
+        <h1 id="page-title">Launcher mapped end to end</h1>
+        <p class="lede">Everything below ships in Cinder v2.0.0 and is verified against the app. Screenshots are from the real launcher.</p>
+      </div>
+    </section>
 
-      <h2 id="launcher">The launcher</h2>
-      <ul class="grid-3">
-        <li class="card">
-          <h3>Offline + Microsoft profiles</h3>
-          <p>Local nicknames with a name forge that suggests guaranteed-valid names, plus Microsoft login with automatic token refresh. Click any profile to make it active.</p>
-        </li>
-        <li class="card">
-          <h3>Versions, honestly cached</h3>
-          <p>Live Mojang list with a 6-hour cache and an offline fallback. Search, filter by release/snapshot/beta/alpha, see installed badges, uninstall in one click.</p>
-        </li>
-        <li class="card">
-          <h3>Fabric &amp; Quilt auto-install</h3>
-          <p>Pick a loader and it installs itself for the selected version on next launch. Forge/NeoForge files are detected and flagged with a clear warning.</p>
-        </li>
-        <li class="card">
-          <h3>Modrinth mods in-app</h3>
-          <p>Search Modrinth, pick an exact file with a version picker, toggle mods on/off without deleting them, or drop in your own .jars.</p>
-        </li>
-        <li class="card">
-          <h3>World backups &amp; restore</h3>
-          <p>Singleplayer saves with size and date. Zip backups, restore the newest one (your current world is kept as a timestamped copy), delete with confirmation.</p>
-        </li>
-        <li class="card">
-          <h3>Live server pings</h3>
-          <p>Featured networks show live players, MOTD and latency, refreshed with a 60-second cache. Paste any Java server IP for quick-join on launch.</p>
-        </li>
-        <li class="card">
-          <h3>3D skin previews</h3>
-          <p>Auto-spinning 3D view for any Java username, your active profile, or a 64×64 PNG from disk. Textures are cached for a day and work offline after first fetch.</p>
-        </li>
-        <li class="card">
-          <h3>Performance &amp; diagnostics</h3>
-          <p>JVM presets (Balanced, G1GC, ZGC with a Java-21 guard), per-version Java auto-pick, update checker, and one-click diagnostics copy for support.</p>
-        </li>
-        <li class="card">
-          <h3>Discord presence, zero setup</h3>
-          <p>Keep the Discord desktop app open and your profile shows Cinder automatically — in game it switches to version, player and server.</p>
-        </li>
-      </ul>
-      <figure class="hero-shot">
-        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Cinder — Versions</span></div>
-        <img src="shots/versions.png" alt="Real screenshot of the Cinder Versions tab with installed 26.3 release and snapshot list" width="1451" height="996">
-        <figcaption>The Versions tab: live Mojang list with installed badges.</figcaption>
-      </figure>
-      <figure class="hero-shot">
-        <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>Cinder — Mods</span></div>
-        <img src="shots/mods.png" alt="Real screenshot of the Cinder Mods tab with Fabric loader picker and Modrinth search results" width="1446" height="982">
-        <figcaption>The Mods tab: Modrinth search with one-click installs.</figcaption>
-      </figure>
+    <section id="accounts" class="feature-detail" aria-labelledby="accounts-title">
+      <div class="wrap">
+        <div class="feature-detail-grid">
+          <div class="feature-detail-content">
+            <div class="feature-detail-badge">
+              <span class="badge badge-accent">Profiles</span>
+            </div>
+            <h2 id="accounts-title">Offline + Microsoft Sign-In</h2>
+            <p class="feature-detail-lede">Two ways to play. Offline profiles with a built-in name forge that generates guaranteed-valid usernames. Microsoft login with automatic token refresh for premium servers like Hypixel.</p>
+            <ul class="feature-detail-list">
+              <li><strong>Name Forge:</strong> Five styles (Mixed, Ember, Hero, Dark, Cute) — click suggestions to fill, then Add. Names checked against existing accounts.</li>
+              <li><strong>Microsoft Login:</strong> One click opens the OAuth flow. Token auto-refreshes on launch — no re-login needed.</li>
+              <li><strong>Avatar & Status:</strong> Minotar helm avatars, online/offline badges, click-to-activate.</li>
+              <li><strong>Honest UX:</strong> Offline accounts show "cracked servers only" — no false promises about premium servers.</li>
+            </ul>
+            <a href="download.html" class="btn btn-primary">Try it now</a>
+          </div>
+          <figure class="feature-detail-shot">
+            <div class="shot-chrome" aria-hidden="true">
+              <div class="shot-dots"><span></span><span></span><span></span></div>
+              <div class="shot-title">Cinder — Profiles Tab</div>
+            </div>
+            <img src="shots/accounts.png" alt="Profiles tab showing offline accounts with name forge suggestions and Microsoft login" width="720" height="480" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
 
-    </div>
+    <section id="versions" class="feature-detail feature-detail-alt" aria-labelledby="versions-title">
+      <div class="wrap">
+        <div class="feature-detail-grid">
+          <figure class="feature-detail-shot">
+            <div class="shot-chrome" aria-hidden="true">
+              <div class="shot-dots"><span></span><span></span><span></span></div>
+              <div class="shot-title">Cinder — Versions Tab</div>
+            </div>
+            <img src="shots/versions.png" alt="Versions tab with live Mojang list, installed badges, search and filters" width="720" height="480" loading="lazy">
+          </figure>
+          <div class="feature-detail-content">
+            <div class="feature-detail-badge">
+              <span class="badge badge-accent">Versions</span>
+            </div>
+            <h2 id="versions-title">Versions, Honestly Cached</h2>
+            <p class="feature-detail-lede">Live Mojang manifest with a 6-hour disk cache and offline fallback. Search, filter by type (release/snapshot/beta/alpha), see installed badges, uninstall in one click.</p>
+            <ul class="feature-detail-list">
+              <li><strong>Live + Cached:</strong> Fetches from Mojang, caches for 6 hours, falls back to disk if offline.</li>
+              <li><strong>Smart Filters:</strong> Release, Snapshot, Beta, Alpha — or show only installed.</li>
+              <li><strong>One-Click Uninstall:</strong> Removes version files; saves and mods stay untouched.</li>
+              <li><strong>Version Picker:</strong> Quick-select from Play tab with installed indicator.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mods" class="feature-detail" aria-labelledby="mods-title">
+      <div class="wrap">
+        <div class="feature-detail-grid">
+          <div class="feature-detail-content">
+            <div class="feature-detail-badge">
+              <span class="badge badge-accent">Mods</span>
+            </div>
+            <h2 id="mods-title">Fabric & Quilt Auto-Install + Modrinth In-App</h2>
+            <p class="feature-detail-lede">Pick a loader and it installs itself for the selected version on next launch. Modrinth search with version picker, enable/disable toggles, custom .jar support.</p>
+            <ul class="feature-detail-list">
+              <li><strong>Loader Auto-Install:</strong> Fabric or Quilt — one toggle, installs on launch. Profile created automatically.</li>
+              <li><strong>Modrinth Search:</strong> Search by name, filter by loader, pick exact file version.</li>
+              <li><strong>Compatibility Warnings:</strong> Forge/NeoForge mods flagged with clear reason — no silent crashes.</li>
+              <li><strong>Local Management:</strong> Enable/disable without deleting, delete with confirmation, open mods folder.</li>
+              <li><strong>Auto-Loader Detection:</strong> Installing a Fabric mod auto-selects Fabric loader.</li>
+            </ul>
+          </div>
+          <figure class="feature-detail-shot">
+            <div class="shot-chrome" aria-hidden="true">
+              <div class="shot-dots"><span></span><span></span><span></span></div>
+              <div class="shot-title">Cinder — Mods Tab</div>
+            </div>
+            <img src="shots/mods.png" alt="Mods tab with Fabric/Quilt selector, Modrinth search results, and local mod list" width="720" height="480" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="servers" class="feature-detail feature-detail-alt" aria-labelledby="servers-title">
+      <div class="wrap">
+        <div class="feature-detail-grid">
+          <figure class="feature-detail-shot">
+            <div class="shot-chrome" aria-hidden="true">
+              <div class="shot-dots"><span></span><span></span><span></span></div>
+              <div class="shot-title">Cinder — Servers Tab</div>
+            </div>
+            <img src="shots/servers.png" alt="Servers tab with featured networks showing live player counts and ping" width="720" height="480" loading="lazy">
+          </figure>
+          <div class="feature-detail-content">
+            <div class="feature-detail-badge">
+              <span class="badge badge-accent">Servers</span>
+            </div>
+            <h2 id="servers-title">Live Server Pings</h2>
+            <p class="feature-detail-lede">Featured networks show live players, MOTD, and latency — refreshed every 60 seconds. Custom IP quick-join fills the server field on Play tab automatically.</p>
+            <ul class="feature-detail-list">
+              <li><strong>Native Probe:</strong> Rust <code>slp-probe</code> binary (zero deps, protocol 767) with pure-Node fallback.</li>
+              <li><strong>60s Cache:</strong> Prevents hammering servers; manual refresh available.</li>
+              <li><strong>Featured Networks:</strong> Hypixel, PikaNetwork, GommeHD, 2b2t, MineWind, Wurst, CraftMend.</li>
+              <li><strong>Custom Quick-Join:</strong> Paste any Java IP — Cinder auto-joins on launch.</li>
+              <li><strong>Filter Chips:</strong> All / Minigames / SMP / Anarchy.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skins" class="feature-detail" aria-labelledby="skins-title">
+      <div class="wrap">
+        <div class="feature-detail-grid">
+          <div class="feature-detail-content">
+            <div class="feature-detail-badge">
+              <span class="badge badge-accent">Skins</span>
+            </div>
+            <h2 id="skins-title">3D Skin Previews</h2>
+            <p class="feature-detail-lede">Auto-spinning 3D view (skinview3d) with walking pose. Try any Java username, load your active profile skin, or import a classic 64×64 PNG from disk.</p>
+            <ul class="feature-detail-list">
+              <li><strong>Live Fetch:</strong> Type any username → preview fetches skin via launcher backend (24h disk cache).</li>
+              <li><strong>Profile Skin:</strong> One click loads the active account's skin.</li>
+              <li><strong>PNG Import/Export:</strong> Upload 64×64 PNG, download current canvas frame.</li>
+              <li><strong>Locked Camera:</strong> Zoom and pan disabled so it never flies away.</li>
+            </ul>
+          </div>
+          <figure class="feature-detail-shot">
+            <div class="shot-chrome" aria-hidden="true">
+              <div class="shot-dots"><span></span><span></span><span></span></div>
+              <div class="shot-title">Cinder — Skins Tab</div>
+            </div>
+            <img src="shots/skins.png" alt="Skins tab with 3D preview canvas, username input, and action buttons" width="720" height="480" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="worlds" class="feature-detail feature-detail-alt" aria-labelledby="worlds-title">
+      <div class="wrap">
+        <div class="feature-detail-grid">
+          <figure class="feature-detail-shot">
+            <div class="shot-chrome" aria-hidden="true">
+              <div class="shot-dots"><span></span><span></span><span></span></div>
+              <div class="shot-title">Cinder — Worlds Tab</div>
+            </div>
+            <img src="shots/worlds.png" alt="Worlds tab showing singleplayer saves with size, date, and backup/restore actions" width="720" height="480" loading="lazy">
+          </figure>
+          <div class="feature-detail-content">
+            <div class="feature-detail-badge">
+              <span class="badge badge-accent">Worlds</span>
+            </div>
+            <h2 id="worlds-title">World Backups & Restore</h2>
+            <p class="feature-detail-lede">Singleplayer saves listed with size and modified date. Zip a backup in one click, restore the newest backup later (current world kept as timestamped copy), delete with confirmation.</p>
+            <ul class="feature-detail-list">
+              <li><strong>Backup:</strong> Zips to <code><gameDir>/backups/<name>-YYYYMMDD-HHMM.zip</code> via adm-zip.</li>
+              <li><strong>Restore:</strong> Extracts newest backup for that world; current folder kept as <code>.bak-<timestamp></code>.</li>
+              <li><strong>Delete:</strong> Removes save folder with confirmation modal.</li>
+              <li><strong>Quick Actions:</strong> Refresh, open saves folder, open screenshots folder.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="performance" class="feature-detail" aria-labelledby="performance-title">
+      <div class="wrap">
+        <div class="feature-detail-grid">
+          <div class="feature-detail-content">
+            <div class="feature-detail-badge">
+              <span class="badge badge-accent">Performance</span>
+            </div>
+            <h2 id="performance-title">JVM Presets, Java Auto-Pick & Diagnostics</h2>
+            <p class="feature-detail-lede">Tune garbage collection for smoother frames, let Cinder pick the right Java per version, and copy full diagnostics for support in one click.</p>
+            <ul class="feature-detail-list">
+              <li><strong>JVM Presets:</strong> Balanced (default), Performance (G1GC throughput), Low-Latency (ZGC, Java 21+ only).</li>
+              <li><strong>Java Auto-Detect:</strong> Scans JAVA_HOME, PATH, Adoptium, Microsoft, Temurin, BellSoft, Zulu, Mojang-bundled — no hardcoded paths.</li>
+              <li><strong>RAM Sliders:</strong> Min/Max with presets (Potato 2G, Balanced 4G, Beast 8G, Overkill 12G) + system hint.</li>
+              <li><strong>Diagnostics Copy:</strong> Version, Java list, settings, net probes (Mojang/Modrinth/Minotar) + log tail.</li>
+              <li><strong>Update Checker:</strong> On-launch GitHub release check + manual "Check now" button.</li>
+            </ul>
+          </div>
+          <figure class="feature-detail-shot">
+            <div class="shot-chrome" aria-hidden="true">
+              <div class="shot-dots"><span></span><span></span><span></span></div>
+              <div class="shot-title">Cinder — Settings Tab</div>
+            </div>
+            <img src="shots/settings.png" alt="Settings tab with JVM presets, Java dropdown, RAM sliders, and Discord section" width="720" height="480" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="discord" class="feature-detail feature-detail-alt" aria-labelledby="discord-title">
+      <div class="wrap">
+        <div class="feature-detail-grid">
+          <figure class="feature-detail-shot">
+            <div class="shot-chrome" aria-hidden="true">
+              <div class="shot-dots"><span></span><span></span><span></span></div>
+              <div class="shot-title">Cinder — Discord Presence</div>
+            </div>
+            <img src="shots/discord.png" alt="Discord profile showing Playing Cinder with logo and download button" width="720" height="480" loading="lazy">
+          </figure>
+          <div class="feature-detail-content">
+            <div class="feature-detail-badge">
+              <span class="badge badge-accent">Discord</span>
+            </div>
+            <h2 id="discord-title">Discord Rich Presence — Zero Setup</h2>
+            <p class="feature-detail-lede">Keep the Discord desktop app open. Your profile automatically shows "Playing Cinder" + logo + Download button. In game it switches to "Playing Minecraft 1.21" + player → server with timer.</p>
+            <ul class="feature-detail-list">
+              <li><strong>No Bot, No Token:</strong> Shared Application ID baked into the launcher — works like Valorant's auto-status.</li>
+              <li><strong>Auto-Switch:</strong> Launcher → "Playing Cinder", In-game → "Playing Minecraft {version}" + "{player} → {server}".</li>
+              <li><strong>Customizable:</strong> Override Application ID, change download button link, toggle on/off.</li>
+              <li><strong>Troubleshooting:</strong> Built-in Test button, retry every 30s, documented fix for Discord's built-in Minecraft detection.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2 id="cta-title">Ready to launch?</h2>
+          <p>Download Cinder v2.0.0 for Windows, macOS, or Linux. No installer required — just run and play.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary btn-lg" href="download.html">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download Now
+            </a>
+            <a class="btn btn-outline btn-lg" href="https://github.com/monk81694-crypto/cinder/releases" target="_blank" rel="noopener">View Releases</a>
+          </div>
+          <p class="cta-note">Proprietary software · © 2026 radoslavgeme · All rights reserved</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="wrap">
-      <nav aria-label="Footer">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="download.html">Download</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li><a href="docs.html">Docs</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-      <p class="legal">Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
-      <p class="copy">© <span id="year">2026</span> radoslavgeme · All rights reserved. Unauthorized copying, modification or distribution prohibited.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Cinder home">
+            <img src="logo.svg" alt="" width="140" height="28">
+          </a>
+          <p class="footer-tagline">Minecraft launcher for Java Edition. Offline or premium. Your way.</p>
+          <div class="footer-social">
+            <a href="https://github.com/monk81694-crypto/cinder" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://discord.gg/cinder" target="_blank" rel="noopener" aria-label="Discord">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.675 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.083.083 0 0 0 .031.057 19.9 19.9 0 0 0 5.994 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 1 .077-.076c.031-.01.062-.017.093-.025.124-.03.372-.118.598-.143.309-.035.561 0 .816.123a15.17 15.17 0 0 0 1.485.385.07.07 0 0 0 .07-.008c.513-.164.982-.574 1.323-1.133a.07.07 0 0 1 .114-.009c.176.112.373.217.584.297.539.201 1.21.23 1.787.123.226-.025.476-.112.6-.143.031-.008.062-.015.093-.025a.077.077 0 0 1 .078.075c-.097.722-.35 1.43-.77 2.064a.077.077 0 0 0 .022.04 19.82 19.82 0 0 0 5.994-3.03.077.077 0 0 0 .033-.056c.355-4.023-1.17-8.558-3.57-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="download.html">Download</a></li>
+              <li><a href="changelog.html">Changelog</a></li>
+              <li><a href="docs.html">Documentation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="https://github.com/monk81694-crypto/cinder/issues" target="_blank" rel="noopener">Issue Tracker</a></li>
+              <li><a href="https://discord.gg/cinder" target="_blank" rel="noopener">Discord Community</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">License</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p class="legal">Cinder is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+        <p class="copy">© <span id="year">2026</span> radoslavgeme · All rights reserved. Unauthorized copying, modification or distribution prohibited.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.getElementById('site-nav');
+    const navWrapper = document.querySelector('.nav-wrapper');
+
+    navToggle?.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      navList?.classList.toggle('open');
+      navWrapper?.classList.toggle('nav-open');
+    });
+
+    navList?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navList.classList.remove('open');
+        navWrapper?.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature-detail-content, .feature-detail-shot, .section-header').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
