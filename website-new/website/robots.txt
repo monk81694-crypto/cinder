@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://monk81694-crypto.github.io/cinder/sitemap.xml

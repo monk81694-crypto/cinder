@@ -1,39 +1,9 @@
-# Deploying the Cinder website
+# Deploy
 
-The site in `website/` is plain static HTML/CSS/JS — no build step.
+1. Put your real screenshots in `shots/` (1455x978 PNG): play, accounts, versions, servers, mods, skins, worlds, settings, discord.
+2. Create `favicon.ico` from `favicon.svg` (the site links the SVG; add the .ico for older browsers).
+3. Publish: `npx gh-pages -d website`
+4. In the repo: Settings > Pages > Source = `gh-pages` branch.
+5. If your Pages URL differs from `https://monk81694-crypto.github.io/cinder`, update `sitemap.xml`, `robots.txt` and the canonical/OG URLs in each page.
 
-## Local preview
-
-```powershell
-cd website
-python -m http.server 8080
-# open http://localhost:8080
-python check.py --root .
-```
-
-`check.py` verifies: all 6 pages exist, one `<h1>` each, titles,
-meta descriptions, image `alt` text, internal links resolve, the Mojang
-legal line is present everywhere, and key color pairs pass WCAG contrast.
-
-## GitHub Pages
-
-1. Push the repo to GitHub.
-2. Settings → Pages → Deploy from branch → `main`, folder `/website`.
-3. The site goes live at `https://<user>.github.io/<repo>/`.
-4. Then update the placeholder domain in `sitemap.xml` and `robots.txt`
-    (`https://monk81694-crypto.github.io/cinder/`).
-
-## Netlify
-
-- Drag the `website/` folder into Netlify Drop, or
-  `netlify deploy --dir website --prod` with the Netlify CLI.
-- No build command, no environment variables.
-
-## Release checklist
-
-- [ ] Version badge matches `package.json` (`index.html`, download page).
-- [ ] `changelog.html` matches root `CHANGELOG.md`.
-- [ ] `python check.py` exits 0.
-- [ ] `favicon.ico` + `og.svg` load (replace `og.svg` with a raster
-      `og.png` and update meta tags when real screenshots exist).
-- [ ] Mockups still labeled as mockups until replaced by real screenshots.
+The download page reads `https://api.github.com/repos/monk81694-crypto/cinder/releases/latest`. Attach `.exe`, `.dmg` and `.AppImage` files to a release and put the SHA-256 hash (64 hex chars) in the release notes.

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Docs | Cinder</title><meta name="description" content="Install, launch and troubleshoot Cinder."><meta name="theme-color" content="#06060F">
+<link rel="canonical" href="https://monk81694-crypto.github.io/cinder/docs.html"><meta property="og:title" content="Docs | Cinder"><meta property="og:description" content="Install, launch and troubleshoot Cinder."><meta property="og:image" content="https://monk81694-crypto.github.io/cinder/og.svg"><meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css"></head>
+<body data-accent="ember"><a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap"><a class="brand" href="index.html"><img src="logo.svg" width="32" height="32" alt="">Cinder</a>
+<button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button><nav aria-label="Main"><ul id="menu"><li><a href="index.html">Home</a></li><li><a href="features.html">Features</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li><li><a href="docs.html" aria-current="page">Docs</a></li><li><a href="faq.html">FAQ</a></li></ul></nav></div></header>
+<main id="main">
+<section class="page-hero"><div class="wrap"><h1>Docs</h1></div></section>
+<div class="wrap docs"><nav class="toc" aria-label="On this page"><a href="#install">Install</a><a href="#first-launch">First launch</a><a href="#versions">Versions</a><a href="#mods">Mods</a><a href="#worlds">Worlds</a><a href="#skins">Skins</a><a href="#troubleshooting">Troubleshooting</a></nav><div>
+<section id="install"><h2>Install</h2><h3>A. Installer</h3><p>Download the .exe, .dmg or AppImage from the <a href="download.html">download page</a> and run it.</p><h3>B. From source</h3><pre><code>cd tlauncher
+npm install
+npm start</code></pre></section>
+<section id="first-launch"><h2>First launch</h2><p>Add an account, pick a version and press Launch (<kbd>Ctrl</kbd>+<kbd>Enter</kbd>). The first launch downloads the game version, about 200 MB.</p></section>
+<section id="versions"><h2>Versions</h2><p>Search the Mojang list and filter by release, snapshot, beta or alpha. Installed versions are badged and can be uninstalled.</p></section>
+<section id="mods"><h2>Mods</h2><p>Search Modrinth, choose a version and install. Choosing Fabric or Quilt installs the loader automatically. Toggle installed mods on or off in the local list.</p></section>
+<section id="worlds"><h2>Worlds</h2><p>Backup writes a zip to <code>&lt;gameDir&gt;/backups</code>. Restore extracts the newest backup and keeps your current folder as <code>.bak-&lt;timestamp&gt;</code>.</p></section>
+<section id="skins"><h2>Skins</h2><p>Preview a username, load your profile skin or upload a 64x64 PNG.</p></section>
+<section id="troubleshooting"><h2>Troubleshooting</h2><div class="grid g3"><div class="card"><h3>Failed to log in: Invalid session</h3><p>You are using an offline name on an online-mode server. Sign in with Microsoft. No launcher can bypass this.</p></div><div class="card"><h3>Java not found or wrong version</h3><p>Open Settings and pick a Java from the dropdown. Cinder picks 17, 21 or 25 per version when it can find them.</p></div><div class="card"><h3>Discord shows Minecraft, not Cinder</h3><p>Open the Discord desktop app before launching. In Cinder, Settings > Discord > Test should say Connected. If not, remove the Minecraft entry under Discord Registered Games and restart Discord.</p></div><div class="card"><h3>Updates</h3><p>Use Settings > Check for updates, or download the latest installer from the download page.</p></div></div></section></div></div></main>
+<footer><div class="wrap"><div><strong style="color:var(--text-primary)">Cinder v2.0.0</strong><p>Proprietary Minecraft Java launcher by radoslavgeme. &copy; 2026 radoslavgeme. All rights reserved. Not affiliated with Mojang, Microsoft or Discord.</p></div>
+<div><a href="https://github.com/monk81694-crypto/cinder">GitHub</a> &nbsp; <button class="btn btn-ghost btn-sm" id="open-palette" type="button">Search <kbd>Ctrl K</kbd></button></div></div></footer>
+<div class="modal" id="palette" role="dialog" aria-modal="true" aria-label="Command palette"><div class="box"><input class="input" type="text" placeholder="Go to a page or set an accent" aria-label="Search commands"><ul class="cmd-list"></ul></div></div>
+<script src="app.js"></script></body></html>
