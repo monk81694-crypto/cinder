@@ -1,4 +1,4 @@
-﻿# Cinder v2.0.0 — Minecraft Launcher (offline + Microsoft, mods, Discord presence)
+﻿# Cinder v2.0.1 — Minecraft Launcher (offline + Microsoft, mods, shaders, Discord)
 
 ![Cinder logo](brand/logo-light.svg)
 
@@ -6,11 +6,13 @@ Made by **radoslavgeme**. © 2026 radoslavgeme. All rights reserved.
 
 Cinder is a proprietary Electron launcher for Minecraft Java: offline profiles with a
 built-in **name forge**, Microsoft login for premium play, Fabric/Quilt loader
-auto-install, Modrinth mods, server quick-join, and **Discord Rich Presence**
-(“Playing Cinder” + logo + Download button on your profile).
+auto-install, Modrinth mods, resource packs, shader packs, server quick-join, and
+**Discord Rich Presence** (“Playing Cinder” + logo + Download button on your profile).
 
-v2.0.0 adds Skins + Worlds tabs, live server pings, JVM presets, and release tooling.
-Tabs: Play / Servers / Versions / Profiles / Skins / Worlds / Mods / Settings / Logs.
+v2.0.1 adds **Resource Packs**, **Shader Packs**, **Launch Profiles**, **MultiMC import**,
+**Profile Groups**, **Auto mod updates**, **Server Groups**, **Per-profile Discord status**,
+**JDK downloader**, **Game dir health check**, **Settings export/import**, and more.
+Tabs: Play / Servers / Versions / Profiles / Skins / Worlds / Mods / Resource Packs / Shader Packs / Settings / Logs.
 
 ## Quick Start
 
