@@ -1,0 +1,1 @@
+cargo:rustc-env=MIME_TYPES_GENERATED_PATH=C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\build\mime_guess-c0064242cf5a4f10\out\mime_types_generated.rs

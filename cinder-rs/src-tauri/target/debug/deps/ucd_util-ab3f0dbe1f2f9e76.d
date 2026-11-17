@@ -1,0 +1,11 @@
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\ucd_util-ab3f0dbe1f2f9e76.d: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\hangul.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\ideograph.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\name.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\property.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\unicode_tables\mod.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\unicode_tables\jamo_short_name.rs
+
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\libucd_util-ab3f0dbe1f2f9e76.rmeta: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\hangul.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\ideograph.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\name.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\property.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\unicode_tables\mod.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\unicode_tables\jamo_short_name.rs
+
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\lib.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\hangul.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\ideograph.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\name.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\property.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\unicode_tables\mod.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ucd-util-0.1.10\src\unicode_tables\jamo_short_name.rs:

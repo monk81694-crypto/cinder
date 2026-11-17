@@ -1,0 +1,10 @@
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\crc32fast-5beb4bb1452a17c1.d: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\baseline.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\combine.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\specialized\mod.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\table.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\specialized\pclmulqdq.rs
+
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\libcrc32fast-5beb4bb1452a17c1.rmeta: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\baseline.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\combine.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\specialized\mod.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\table.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\specialized\pclmulqdq.rs
+
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\lib.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\baseline.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\combine.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\specialized\mod.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\table.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\crc32fast-1.5.5\src\specialized\pclmulqdq.rs:

@@ -1,0 +1,10 @@
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\toml_datetime-d2733ab31de7f64a.d: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\datetime.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\de.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\ser.rs
+
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\libtoml_datetime-d2733ab31de7f64a.rlib: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\datetime.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\de.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\ser.rs
+
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\libtoml_datetime-d2733ab31de7f64a.rmeta: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\datetime.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\de.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\ser.rs
+
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\lib.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\datetime.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\de.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\toml_datetime-1.1.3+spec-1.1.0\src\ser.rs:

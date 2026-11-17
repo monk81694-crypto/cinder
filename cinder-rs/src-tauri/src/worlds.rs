@@ -144,7 +144,7 @@ impl WorldManager {
 
     async fn create_zip(&self, source: &Path, dest: &Path) -> Result<()> {
         use zip::{ZipArchive, ZipWriter, write::FileOptions};
-        let mut zip = adm_zip::adm_zip::ZipWriter::new(std::fs::File::create(dest)?);
+        let mut zip = ZipWriter::new(std::fs::File::create(dest)?);
 
         let walker = walkdir::WalkDir::new(source);
         for entry in walker.into_iter().filter_map(|e| e.ok()) {
@@ -153,11 +153,11 @@ impl WorldManager {
             let name = relative.to_string_lossy().to_string;
 
             if entry.path().is_file() {
-                zip.start_file(name, adm_zip::adm_zip::CompressionMethod::Deflated)?;
+                zip.start_file(name, CompressionMethod::Deflated)?;
                 let content = tokio::fs::read(path).await?;
                 std::io::Write::write_all(&mut zip, &content)?;
             } else {
-                zip.add_directory(name, adm_zip::adm_zip::CompressionMethod::Stored)?;
+                zip.add_directory(name, CompressionMethod::Stored)?;
             }
         }
 
@@ -187,7 +187,7 @@ impl WorldManager {
 
     async fn extract_zip(&self, zip_path: &Path, dest: &Path) -> Result<()> {
         use zip::{ZipArchive, ZipWriter, write::FileOptions};
-        let mut zip = adm_zip::adm_zip::ZipArchive::new(std::fs::File::open(zip_path)?)?;
+        let mut zip = ZipArchive::new(std::fs::File::open(zip_path)?)?;
 
         tokio::fs::create_dir_all(dest).await?;
 

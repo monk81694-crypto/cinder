@@ -91,7 +91,7 @@ impl ResourceManager {
     async fn read_pack_mcmeta(&self, path: &Path) -> Result<(String, Option<String>, u32, Vec<u32>, Option<PathBuf>)> {
         use zip::ZipArchive;
 
-        let zip = adm_zip::adm_zip::ZipArchive::new(path)?;
+        let zip = ZipArchive::new(path)?;
 
         let mut name = "Unknown Pack".to_string();
         let mut description = None;
@@ -123,7 +123,7 @@ impl ResourceManager {
         Ok((name, description, pack_format, supported_formats, icon_path))
     }
 
-    async fn extract_icon(&self, zip: &adm_zip::adm_zip::ZipArchive) -> Result<PathBuf> {
+    async fn extract_icon(&self, zip: &ZipArchive) -> Result<PathBuf> {
         // Extract pack.png to cache
         let cache_dir = self.game_dir.join("cache").join("icons");
         tokio::fs::create_dir_all(&cache_dir).await?;

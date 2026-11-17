@@ -1,0 +1,8 @@
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\rustls_platform_verifier-db2cbeb3c752a3ff.d: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\verification\mod.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\verification\windows.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\../README.md
+
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\librustls_platform_verifier-db2cbeb3c752a3ff.rmeta: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\verification\mod.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\verification\windows.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\../README.md
+
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\lib.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\verification\mod.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\verification\windows.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rustls-platform-verifier-0.7.1\src\../README.md:

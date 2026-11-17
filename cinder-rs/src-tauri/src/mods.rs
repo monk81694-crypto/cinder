@@ -98,7 +98,7 @@ impl ModManager {
     async fn extract_mod_metadata(&self, path: &Path) -> Result<(String, String, ModLoader, Vec<String>, Option<String>, Vec<ModDependency>)> {
         use zip::ZipArchive;
 
-        let zip = adm_zip::adm_zip::ZipArchive::new(path)?;
+        let zip = ZipArchive::new(path)?;
         let mut name = "Unknown Mod".to_string();
         let mut version = "1.0.0".to_string();
         let mut loader = ModLoader::Fabric;
@@ -499,7 +499,6 @@ impl ModManager {
 
         Ok(())
     }
-}
 
 /// Mod update info
 #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
@@ -527,4 +526,6 @@ mod tests {
         let json = serde_json::to_string(&source).unwrap();
         assert_eq!(json, "\"modrinth\"");
     }
+}
+}
 }

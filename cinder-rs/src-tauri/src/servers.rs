@@ -223,8 +223,8 @@ impl ServerManager {
                 Err(e) => {
                     warn!("Failed to ping {}: {}", server.name, e);
                 }
-            // Small delay to avoid overwhelming servers
-            tokio::time::sleep(Duration::from_millis(50)).await;
+            {
+    let _ = tokio::time::sleep(Duration::from_millis(50)).await;
         }
 
         Ok(results)
@@ -421,4 +421,6 @@ mod tests {
     fn test_region_detection() {
         assert!(matches!(ServerRegion::UsEast, ServerRegion::UsEast));
     }
+}
+}
 }

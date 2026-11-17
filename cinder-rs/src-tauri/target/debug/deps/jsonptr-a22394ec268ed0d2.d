@@ -1,0 +1,17 @@
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\jsonptr-a22394ec268ed0d2.d: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\assign.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\delete.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\resolve.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\diagnostic.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\pointer.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\pointer\slice.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\token.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\index.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\component.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\../README.md
+
+C:\Users\yespl\cinder\cinder-rs\src-tauri\target\debug\deps\libjsonptr-a22394ec268ed0d2.rmeta: C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\lib.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\assign.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\delete.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\resolve.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\diagnostic.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\pointer.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\pointer\slice.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\token.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\index.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\component.rs C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\../README.md
+
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\lib.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\assign.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\delete.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\resolve.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\diagnostic.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\pointer.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\pointer\slice.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\token.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\index.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\component.rs:
+C:\Users\yespl\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\jsonptr-0.7.1\src\../README.md:
+
+# env-dep:CARGO_PKG_VERSION=0.7.1

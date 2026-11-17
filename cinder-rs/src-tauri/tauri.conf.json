@@ -1,0 +1,124 @@
+{
+  "$schema": "https://schema.tauri.app/config/2.0.0",
+  "productName": "Cinder",
+  "version": "3.0.0",
+  "identifier": "gg.cinder.launcher",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Cinder",
+        "width": 1200,
+        "height": 720,
+        "minWidth": 900,
+        "minHeight": 600,
+        "decorations": false,
+        "transparent": true,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true,
+        "visible": false,
+        "theme": "dark"
+      }
+    ],
+    "macOS": {
+      "minimumSystemVersion": "10.15"
+    },
+    "linux": {
+      "icon": "icons/icon.png"
+    },
+    "security": {
+      "csp": "default-src 'self' data: blob: https://api.modrinth.com https://api.github.com https://minotar.net https://resources.download.minecraft.net https://piston-meta.mojang.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://api.modrinth.com https://api.github.com https://minotar.net https://resources.download.minecraft.net https://piston-meta.mojang.com https://login.microsoftonline.com https://discord.com;"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.ico",
+      "icons/icon.icns",
+      "icons/icon.png"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper"
+      },
+      "certificateThumbprint": "",
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    },
+    "macOS": {
+      "entitlements": null,
+      "exceptionDomain": "",
+      "frameworks": [],
+      "providerShortName": "radoslavgeme",
+      "signingIdentity": null
+    },
+    "linux": {
+      "appImage": {
+        "bundleMediaFramework": false
+      },
+      "deb": {
+        "depends": ["libwebkit2gtk-4.1-0", "libayatana-appindicator3-1", "librsvg2-common"]
+      },
+      "rpm": {
+        "depends": ["webkit2gtk-4.1", "libayatana-appindicator3-1", "librsvg2"]
+      }
+    }
+  },
+  "plugins": {
+    "store": {
+      "autoSave": true
+    },
+    "updater": {
+      "active": true,
+      "endpoints": [
+        "https://github.com/monk81694-crypto/cinder/releases/latest/download/latest.json"
+      ],
+      "dialog": true,
+      "pubkey": ""
+    },
+    "shell": {
+      "open": true
+    },
+    "dialog": {
+      "open": true,
+      "save": true
+    },
+    "fs": {
+      "scope": ["$APPDATA/**", "$HOME/**", "$TEMP/**"]
+    },
+    "clipboardManager": {
+      "read": true,
+      "write": true
+    },
+    "globalShortcut": {
+      "shortcuts": {
+        "Ctrl+K": "command-palette",
+        "Ctrl+Enter": "launch-game",
+        "Ctrl+1": "tab-play",
+        "Ctrl+2": "tab-servers",
+        "Ctrl+3": "tab-versions",
+        "Ctrl+3": "tab-accounts",
+        "Ctrl+5": "tab-settings",
+        "Ctrl+6": "tab-logs",
+        "Ctrl+7": "tab-skins",
+        "Ctrl+8": "tab-worlds",
+        "Ctrl+9": "tab-mods",
+        "Ctrl+0": "tab-resource-packs"
+      }
+    },
+    "notification": {
+      "enabled": true
+    },
+    "process": {},
+    "sql": {
+      "dbUrl": "sqlite:cinder.db"
+    }
+  }
+}

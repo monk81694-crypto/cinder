@@ -89,7 +89,7 @@ impl ShaderManager {
     async fn detect_shader_type(&self, path: &Path) -> Result<(String, Option<String>, ShaderType, Option<PathBuf>, Vec<ModLoader>)> {
         use zip::ZipArchive;
 
-        let zip = adm_zip::adm_zip::ZipArchive::new(path)?;
+        let zip = ZipArchive::new(path)?;
         let mut name = "Unknown Shader".to_string();
         let mut description = None;
         let mut shader_type = ShaderType::Universal;
@@ -264,7 +264,7 @@ impl ShaderManager {
 
     async fn get_mod_name(&self, path: &Path) -> Result<String> {
         use zip::ZipArchive;
-        let zip = adm_zip::adm_zip::ZipArchive::new(path)?;
+        let zip = ZipArchive::new(path)?;
         if let Ok(mut file) = zip.by_name("fabric.mod.json") {
             let mut content = String::new();
             std::io::Read::read_to_string(&mut file, &mut content)?;
